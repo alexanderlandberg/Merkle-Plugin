@@ -1,0 +1,40 @@
+.o-userPreview__imageContainer {
+	overflow: initial;
+}
+
+.o-userPreview__imageContainer::after {
+    content: "";
+    display: block;
+    width: 150px;
+    height: 150px;
+    position: absolute;
+    left: 107px;
+    top: -72px;
+    background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/51f62842-3c0e-448f-9fd3-c5b3b6c6ae8e/d5lkmu8-4f1c366f-3cc0-4cf7-bb8d-0b80022d28f8.png/v1/fill/w_380,h_357/christmas_hat_png_by_xhipstaswift_d5lkmu8-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MzU3IiwicGF0aCI6IlwvZlwvNTFmNjI4NDItM2MwZS00NDhmLTlmZDMtYzViM2I2YzZhZThlXC9kNWxrbXU4LTRmMWMzNjZmLTNjYzAtNGNmNy1iYjhkLTBiODAwMjJkMjhmOC5wbmciLCJ3aWR0aCI6Ijw9MzgwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.oMKD8eclYra5LdZiej7heaOQv17E7LpCnHlGTH9GBUI);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+}
+
+.dullan .o-userPreview__imageContainer::after {
+	    transform: rotateY(-180deg);
+    width: 80px;
+    left: 175px;
+    top: -45px;
+}
+
+.o-userPreview__title,
+.o-userPreview__name{
+	color: #ffffff !important;
+}
+
+.o-header,
+.o-navigation,
+.a-main{
+	background-color: #cf0004;
+}
+
+.a-main {
+	background-image: url(https://media.giphy.com/media/cPlsuCWPznPZ98kV2J/giphy.gif);
+	background-size: 50% auto;
+}
