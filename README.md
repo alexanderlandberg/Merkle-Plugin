@@ -2,8 +2,7 @@
 Easter eggs and fun for work
 
 ## Add any of these scripts to your page for a plugin
-
-### I use chrome extension "User JavaScript and CSS"
+I use chrome extension "User JavaScript and CSS"
 [Link to plugin](https://chromewebstore.google.com/detail/nbhcbdghjpllgmfilhnhkllmkecfmpld)
 
 ### email frontend tool
