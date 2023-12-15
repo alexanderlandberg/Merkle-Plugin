@@ -1,13 +1,20 @@
-window.addEventListener("DOMContentLoaded", (event) => {
-    console.log("window loaded");
+// window.addEventListener("DOMContentLoaded", (event) => {
+//     console.log("window loaded");
 
-    setInterval(() => {
-        let dullanSelector = document.querySelector(".dullan");
-        if (!dullanSelector) {
-            addDullan();
-        }
-    }, 10);
-});
+//     setInterval(() => {
+//         let dullanSelector = document.querySelector(".dullan");
+//         if (!dullanSelector) {
+//             addDullan();
+//         }
+//     }, 10);
+// });
+
+setInterval(() => {
+    let dullanSelector = document.querySelector(".dullan");
+    if (!dullanSelector) {
+        addDullan();
+    }
+}, 10);
 
 function addDullan() {
     console.log("add dullan");
