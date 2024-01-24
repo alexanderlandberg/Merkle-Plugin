@@ -73,23 +73,42 @@
   z-index: -1;
   opacity: 0.4;
   background-color: #c8cee9;
-  background-image: url(https://i.pinimg.com/originals/91/95/f4/9195f4dd1b69f90038f627c8af422429.gif);
-  background-image: url(https://media2.giphy.com/media/Wmp1EOzVybWd13s5DB/giphy.gif);
+  background-image: url(./assets/rain.webp);
   background-size: 50% auto;
 }
 
-.dullan .o-userPreview__image {
-  background-image: url(./assets/dullan-penguin.png);
-}
-
 .more-dullan {
-  background-image: url(https://www.hellabrunn.de/fileadmin/_processed_/7/8/csm_humboldtpinguin-hellabrunn-tierpark-tierlexikon-welt-der-voegel_fb554147bd.png);
+  background-image: url(./assets/more-penguin.webp);
   background-size: 90%;
   background-position: top;
 }
 
 .due-walk {
-  background-image: url(https://kernel.dance/dist/loading.gif);
+  background-image: url(./assets/penguin-walk.gif);
   background-size: 140%;
   background-position: top;
+}
+
+.o-userPreview__imageContainer {
+  overflow: initial;
+}
+
+.o-userPreview__imageContainer::after {
+  content: "";
+  display: block;
+  width: 130px;
+  height: 130px;
+  position: absolute;
+  left: 94px;
+  top: -59px;
+  background-image: url(./assets/penguin-hat.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+.dullan .o-userPreview__imageContainer::after {
+  width: 77px;
+  left: 189px;
+  top: -34px;
 }/*# sourceMappingURL=styles.css.map */

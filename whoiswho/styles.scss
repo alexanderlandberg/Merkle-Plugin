@@ -58,7 +58,7 @@ $theme: "january";
         position: absolute;
         left: 107px;
         top: -72px;
-        background-image: url(https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/51f62842-3c0e-448f-9fd3-c5b3b6c6ae8e/d5lkmu8-4f1c366f-3cc0-4cf7-bb8d-0b80022d28f8.png/v1/fill/w_380,h_357/christmas_hat_png_by_xhipstaswift_d5lkmu8-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MzU3IiwicGF0aCI6IlwvZlwvNTFmNjI4NDItM2MwZS00NDhmLTlmZDMtYzViM2I2YzZhZThlXC9kNWxrbXU4LTRmMWMzNjZmLTNjYzAtNGNmNy1iYjhkLTBiODAwMjJkMjhmOC5wbmciLCJ3aWR0aCI6Ijw9MzgwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.oMKD8eclYra5LdZiej7heaOQv17E7LpCnHlGTH9GBUI);
+        background-image: url(./assets/christmas-hat.png);
         background-repeat: no-repeat;
         background-size: contain;
         background-position: center;
@@ -83,7 +83,7 @@ $theme: "january";
     }
 
     .a-main {
-        background-image: url(https://media.giphy.com/media/cPlsuCWPznPZ98kV2J/giphy.gif);
+        background-image: url(./assets/snowing.webp);
         background-size: 50% auto;
     }
 }
@@ -113,9 +113,6 @@ $theme: "january";
             background-size: 50% auto;
         }
     }
-    .dullan .o-userPreview__image {
-        background-image: url(./assets/dullan-penguin.png);
-    }
     .more-dullan {
         background-image: url(./assets/more-penguin.webp);
         background-size: 90%;
@@ -125,5 +122,28 @@ $theme: "january";
         background-image: url(./assets/penguin-walk.gif);
         background-size: 140%;
         background-position: top;
+    }
+
+    .o-userPreview__imageContainer {
+        overflow: initial;
+    }
+
+    .o-userPreview__imageContainer::after {
+        content: "";
+        display: block;
+        width: 130px;
+        height: 130px;
+        position: absolute;
+        left: 94px;
+        top: -59px;
+        background-image: url(./assets/penguin-hat.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
+    .dullan .o-userPreview__imageContainer::after {
+        width: 77px;
+        left: 189px;
+        top: -34px;
     }
 }
