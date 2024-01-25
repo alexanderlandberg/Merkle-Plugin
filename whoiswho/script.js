@@ -130,6 +130,14 @@ function addNewImages() {
         {
             "name": "Nicklas Frandsen",
             "img": "https://img6.fresherslive.com/latestnews/2023/05/taylor-lautner-ethnicity-what-is-taylor-lautner-ethnicity-6476c35b8b71e63598516-900.webp"
+        },
+        {
+            "name": "Robert Ayzma",
+            "img": "https://thewaltdisneycompany.com/app/uploads/2015/10/Bob_Iger.jpg"
+        },
+        {
+            "name": "Jill Hansen",
+            "img": "https://deadline.com/wp-content/uploads/2023/01/nicole-kidman-e1683567950769.jpg?w=1024"
         }
     ]
     const profileNameList = document.querySelectorAll(".a-lead.o-userPreview__name");
