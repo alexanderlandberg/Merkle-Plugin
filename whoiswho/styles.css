@@ -96,11 +96,11 @@
 .o-userPreview__imageContainer::after {
   content: "";
   display: block;
-  width: 130px;
-  height: 130px;
   position: absolute;
-  left: 94px;
-  top: -59px;
+  width: 40%;
+  height: 58%;
+  left: 29.5%;
+  top: -27%;
   background-image: url(./assets/penguin-hat.png);
   background-repeat: no-repeat;
   background-size: contain;
@@ -108,7 +108,8 @@
 }
 
 .dullan .o-userPreview__imageContainer::after {
-  width: 77px;
-  left: 189px;
-  top: -34px;
+  width: 25%;
+  height: 34%;
+  left: 59%;
+  top: -4%;
 }/*# sourceMappingURL=styles.css.map */

@@ -42,7 +42,6 @@
 
 // Theme list: [christas, january]
 $theme: "january";
-// $theme: "";
 
 // Christmas
 @if ($theme == "christmas") {
@@ -53,11 +52,11 @@ $theme: "january";
     .o-userPreview__imageContainer::after {
         content: "";
         display: block;
-        width: 150px;
-        height: 150px;
         position: absolute;
-        left: 107px;
-        top: -72px;
+        width: 47%;
+        height: 68%;
+        left: 33.5%;
+        top: -32.5%;
         background-image: url(./assets/christmas-hat.png);
         background-repeat: no-repeat;
         background-size: contain;
@@ -66,9 +65,10 @@ $theme: "january";
 
     .dullan .o-userPreview__imageContainer::after {
         transform: rotateY(-180deg);
-        width: 80px;
-        left: 175px;
-        top: -45px;
+        width: 25%;
+        height: 36%;
+        top: -4%;
+        left: 55%;
     }
 
     .o-userPreview__title,
@@ -131,19 +131,20 @@ $theme: "january";
     .o-userPreview__imageContainer::after {
         content: "";
         display: block;
-        width: 130px;
-        height: 130px;
         position: absolute;
-        left: 94px;
-        top: -59px;
+        width: 40%;
+        height: 58%;
+        left: 29.5%;
+        top: -27%;
         background-image: url(./assets/penguin-hat.png);
         background-repeat: no-repeat;
         background-size: contain;
         background-position: center;
     }
     .dullan .o-userPreview__imageContainer::after {
-        width: 77px;
-        left: 189px;
-        top: -34px;
+        width: 25%;
+        height: 34%;
+        left: 59%;
+        top: -4%;
     }
 }
