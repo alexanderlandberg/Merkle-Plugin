@@ -40,8 +40,8 @@
     }
 }
 
-// Theme list: [christmas, january]
-$theme: "february";
+// Theme list: [christmas, january, february]
+$theme: "january";
 
 // December (Christmas)
 @if ($theme == "christmas") {
