@@ -46,12 +46,25 @@
   }
 }
 * {
-  font-family: "Bloody", "Proxima Nova", "Helvetica Neue", arial, sans-serif !important;
+  cursor: url(./assets/cupid-arrow.png), auto !important;
+  font-family: "Valentines", "Proxima Nova", "Helvetica Neue", arial, sans-serif !important;
+}
+
+.u-col-12 {
+  margin-bottom: 40px;
+}
+
+.o-usersList__user {
+  background-color: #f9e3ec;
+}
+
+.o-userPreview__content {
+  padding: 2rem 1rem;
 }
 
 .o-header,
 .o-navigation {
-  background-color: #00535e;
+  background-color: #e63898;
 }
 
 .a-main {
@@ -65,45 +78,50 @@
   top: 0;
   left: 0;
   z-index: -1;
-  opacity: 0.4;
-  background-color: #c8cee9;
-  background-image: url(./assets/rain.webp);
-  background-size: 50% auto;
+  background-image: url(https://i.pinimg.com/originals/fe/83/c9/fe83c9ef4f04297233036cb187c92813.gif);
 }
 
 .more-dullan {
-  background-image: url(./assets/more-penguin.webp);
+  background-image: url(https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/13645/cupid-shooting-arrow-clipart-md.png);
   background-size: 90%;
   background-position: top;
 }
 
 .due-walk {
-  background-image: url(./assets/penguin-walk.gif);
-  background-size: 140%;
+  background-image: url(https://i.giphy.com/3ohs4CoKEBL9QNUglq.webp);
   background-position: top;
+  transform: rotateY(180deg);
 }
 
 .o-userPreview__imageContainer {
   overflow: initial;
 }
+.o-userPreview__imageContainer:hover::after {
+  display: block;
+}
+
+.o-usersList__user:hover .o-userPreview__imageContainer::after {
+  display: block;
+}
 
 .o-userPreview__imageContainer::after {
   content: "";
-  display: block;
+  display: none;
   position: absolute;
-  width: 40%;
-  height: 58%;
-  left: 29.5%;
-  top: -27%;
-  background-image: url(./assets/penguin-hat.png);
+  width: 140%;
+  height: 140%;
+  left: -20%;
+  top: -42%;
+  background-image: url(./assets/valentines-hat.png);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
+  pointer-events: none;
 }
 
 .dullan .o-userPreview__imageContainer::after {
-  width: 25%;
-  height: 34%;
-  left: 59%;
-  top: -4%;
+  width: 60%;
+  height: 60%;
+  left: 47%;
+  top: -11%;
 }/*# sourceMappingURL=styles.css.map */
