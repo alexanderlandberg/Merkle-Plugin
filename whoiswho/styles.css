@@ -45,9 +45,8 @@
     left: 100%;
   }
 }
-* {
-  cursor: url(./assets/cupid-arrow.png), auto !important;
-  font-family: "Valentines", "Proxima Nova", "Helvetica Neue", arial, sans-serif !important;
+.o-userPreview__imageContainer {
+  overflow: initial;
 }
 
 .u-col-12 {
@@ -55,73 +54,59 @@
 }
 
 .o-usersList__user {
-  background-color: #f9e3ec;
+  background-color: white;
 }
 
 .o-userPreview__content {
   padding: 2rem 1rem;
 }
 
-.o-header,
-.o-navigation {
-  background-color: #e63898;
-}
-
-.a-main {
-  position: relative;
-}
-.a-main::after {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  background-image: url(https://i.pinimg.com/originals/fe/83/c9/fe83c9ef4f04297233036cb187c92813.gif);
-}
-
-.more-dullan {
-  background-image: url(https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/13645/cupid-shooting-arrow-clipart-md.png);
-  background-size: 90%;
-  background-position: top;
-}
-
-.due-walk {
-  background-image: url(https://i.giphy.com/3ohs4CoKEBL9QNUglq.webp);
-  background-position: top;
-  transform: rotateY(180deg);
-}
-
-.o-userPreview__imageContainer {
-  overflow: initial;
-}
-.o-userPreview__imageContainer:hover::after {
-  display: block;
-}
-
-.o-usersList__user:hover .o-userPreview__imageContainer::after {
-  display: block;
-}
-
 .o-userPreview__imageContainer::after {
   content: "";
-  display: none;
+  display: block;
   position: absolute;
-  width: 140%;
-  height: 140%;
-  left: -20%;
-  top: -42%;
-  background-image: url(./assets/valentines-hat.png);
+  width: 42%;
+  height: 61%;
+  left: 28.5%;
+  top: -34.5%;
+  background-image: url(./assets/easter-hat.webp);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-  pointer-events: none;
 }
 
 .dullan .o-userPreview__imageContainer::after {
-  width: 60%;
-  height: 60%;
-  left: 47%;
-  top: -11%;
+  width: 25%;
+  height: 36%;
+  top: -12%;
+  left: 60%;
+}
+
+.o-header,
+.o-navigation,
+.a-main {
+  background-color: #9fdfde;
+}
+
+.a-button:not(.a-button--transparent),
+.a-button--transparent:hover {
+  background-color: #ff7877;
+}
+
+.a-main {
+  background-image: url(./assets/easter-pattern.jpeg);
+  background-size: 50% auto;
+}
+
+.more-dullan {
+  background-image: url(./assets/easter-egg.png);
+  background-size: 90%;
+  background-position: top;
+  width: 140px;
+  height: 100px;
+}
+
+.due-walk {
+  background-image: url(./assets/easter-bunny-jump.gif);
+  background-position: top;
 }/*# sourceMappingURL=styles.css.map */
