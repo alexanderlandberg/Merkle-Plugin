@@ -1,0 +1,31 @@
+.dullan {
+    .o-userPreview__image {
+        background-image: url(./assets/dullan.jpg);
+        filter: grayscale(1);
+    }
+}
+
+.due-walk {
+    position: fixed;
+    bottom: -4px;
+    left: -200px;
+    width: 200px;
+    height: 200px;
+    background-image: url(./assets/due-walk.gif);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: bottom;
+    animation: kf_due-walk 15s linear infinite;
+}
+
+.more-dullan {
+    position: fixed;
+    background-image: url(./assets/more-dullan.webp);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 200px;
+    height: 150px;
+    transition: all 2s ease-in;
+    z-index: 99999;
+}

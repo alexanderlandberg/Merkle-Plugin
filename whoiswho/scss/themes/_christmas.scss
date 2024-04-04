@@ -1,0 +1,46 @@
+@mixin theme-christmas {
+    .o-userPreview__imageContainer {
+        overflow: initial;
+    }
+
+    .o-userPreview__imageContainer::after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 47%;
+        height: 68%;
+        left: 33.5%;
+        top: -32.5%;
+        background-image: url(./assets/christmas-hat.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
+
+    .dullan .o-userPreview__imageContainer::after {
+        transform: rotateY(-180deg);
+        width: 25%;
+        height: 36%;
+        top: -4%;
+        left: 55%;
+    }
+
+    .o-userPreview__title,
+    .o-userPreview__name {
+        color: #ffffff !important;
+    }
+
+    .o-header,
+    .o-navigation,
+    .a-main {
+        background-color: #cf0004;
+    }
+
+    .a-main {
+        background-image: url(./assets/snowing.webp);
+        background-size: 50% auto;
+    }
+}
+html.t-christmas {
+    @include theme-christmas;
+}

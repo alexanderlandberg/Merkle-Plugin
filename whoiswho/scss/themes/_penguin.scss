@@ -1,0 +1,62 @@
+@mixin theme-penguin {
+    * {
+        font-family: "Bloody", "Proxima Nova", "Helvetica Neue", arial, sans-serif !important;
+    }
+    .o-header,
+    .o-navigation {
+        background-color: #00535e;
+    }
+    .a-main {
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            z-index: -1;
+            opacity: 0.4;
+            background-color: #c8cee9;
+            background-image: url(./assets/rain.webp);
+            background-size: 50% auto;
+        }
+    }
+    .more-dullan {
+        background-image: url(./assets/more-penguin.webp);
+        background-size: 90%;
+        background-position: top;
+    }
+    .due-walk {
+        background-image: url(./assets/penguin-walk.gif);
+        background-size: 140%;
+        background-position: top;
+    }
+
+    .o-userPreview__imageContainer {
+        overflow: initial;
+    }
+
+    .o-userPreview__imageContainer::after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 40%;
+        height: 58%;
+        left: 29.5%;
+        top: -27%;
+        background-image: url(./assets/penguin-hat.png);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
+    .dullan .o-userPreview__imageContainer::after {
+        width: 25%;
+        height: 34%;
+        left: 59%;
+        top: -4%;
+    }
+}
+html.t-penguin {
+    @include theme-penguin;
+}

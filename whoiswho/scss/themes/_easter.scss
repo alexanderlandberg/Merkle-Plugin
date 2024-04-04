@@ -1,0 +1,65 @@
+@mixin theme-easter {
+    .o-userPreview__imageContainer {
+        overflow: initial;
+    }
+
+    .u-col-12 {
+        margin-bottom: 40px;
+    }
+    .o-usersList__user {
+        background-color: white;
+    }
+    .o-userPreview__content {
+        padding: 2rem 1rem;
+    }
+
+    .o-userPreview__imageContainer::after {
+        content: "";
+        display: block;
+        position: absolute;
+        width: 42%;
+        height: 61%;
+        left: 28.5%;
+        top: -34.5%;
+        background-image: url(./assets/easter-hat.webp);
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+    }
+
+    .dullan .o-userPreview__imageContainer::after {
+        width: 25%;
+        height: 36%;
+        top: -12%;
+        left: 60%;
+    }
+
+    .o-header,
+    .o-navigation,
+    .a-main {
+        background-color: #9fdfde;
+    }
+    .a-button:not(.a-button--transparent),
+    .a-button--transparent:hover {
+        background-color: #ff7877;
+    }
+
+    .a-main {
+        background-image: url(./assets/easter-pattern.jpeg);
+        background-size: 50% auto;
+    }
+    .more-dullan {
+        background-image: url(./assets/easter-egg.png);
+        background-size: 90%;
+        background-position: top;
+        width: 140px;
+        height: 100px;
+    }
+    .due-walk {
+        background-image: url(./assets/easter-bunny-jump.gif);
+        background-position: top;
+    }
+}
+html.t-easter {
+    @include theme-easter;
+}

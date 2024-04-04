@@ -1,0 +1,37 @@
+@keyframes kf_due-walk {
+    100% {
+        left: 100%;
+    }
+}
+
+@keyframes squishy_kf {
+    0% {
+        background-size: 100% 200%;
+    }
+
+    100% {
+        background-size: 200% 100%;
+    }
+}
+@keyframes swing_bat_kf {
+    0% {
+        transform: rotate(290deg);
+    }
+
+    100% {
+        transform: rotate(220deg);
+    }
+}
+@keyframes bonk_kf {
+    0% {
+        visibility: hidden;
+    }
+
+    80% {
+        visibility: hidden;
+    }
+
+    100% {
+        visibility: visible;
+    }
+}
