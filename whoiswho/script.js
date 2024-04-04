@@ -1,10 +1,14 @@
-setInterval(() => {
-    let dullanSelector = document.querySelector(".dullan");
-    if (!dullanSelector) {
-        addDullan();
-        addNewImages();
-    }
-}, 10);
+// --- Add Dullan ---
+
+if (window.location.href.indexOf("whoiswho.agency") > -1) {
+    setInterval(() => {
+        let dullanSelector = document.querySelector(".dullan");
+        if (!dullanSelector) {
+            addDullan();
+            addNewImages();
+        }
+    }, 10);
+}
 
 function addDullan() {
     let html = `<div class="o-userPreview o-usersList__user" wire:click="$emitTo('organisms.user-details', 'show', '33d3e70f-60e1-4b21-8126-d543ae4e8777')">
@@ -109,6 +113,8 @@ function addMoreDullan() {
     }, 1000);
 }
 
+// --- Replace Images ---
+
 function addNewImages() {
     const profileList = [
         {
@@ -152,3 +158,75 @@ function addNewImages() {
         }
     }
 }
+
+// --- Change Theme ---
+
+function addThemePicker() {
+    let newBtn = document.createElement("div");
+    newBtn.classList.add("theme-picker-button");
+    newBtn.innerHTML = `Theme Picker`
+    // newBtn.addEventListener("click", showThemePicker);
+    document.querySelector("body").appendChild(newBtn);
+}
+
+let selectedTheme = "";
+const themeList = {
+    "totm": {
+        "id": "totm",
+        "name": "Theme of the month",
+        "emoji": "🤞"
+    },
+    "christmas": {
+        "id": "christmas",
+        "name": "Christmas",
+        "emoji": "🎄"
+    },
+    "easter": {
+        "id": "easter",
+        "name": "Easter",
+        "emoji": "🐣"
+    },
+}
+
+function showThemePicker() {
+    console.log("THEME")
+
+    // build theme picker
+    let newOuter = document.createElement("div");
+    newOuter.classList.add("theme-picker");
+
+    for (let i = 0; i < Object.keys(themeList).length; i++) {
+        const key = Object.keys(themeList);
+
+        let newLabel = document.createElement("label");
+        let newInput = document.createElement("input");
+        newInput.type = "radio";
+        newInput.name = "theme";
+        newInput.id = themeList[key[i]].id;
+        newInput.value = themeList[key[i]].id;
+        let newSpan = document.createElement("span");
+        newSpan.innerHTML = themeList[key[i]].emoji + themeList[key[i]].name;
+
+        // set default selected radio button
+        if (themeList[key[i]].id === "totm") {
+            newInput.checked = true;
+        }
+
+        // change theme
+        newLabel.addEventListener("click", () => {
+            if (selectedTheme) {
+                document.querySelector("html").classList.remove(selectedTheme);
+            }
+            selectedTheme = `t-${themeList[key[i]].id}`;
+            document.querySelector("html").classList.add(selectedTheme);
+        });
+
+        newLabel.appendChild(newInput);
+        newLabel.appendChild(newSpan);
+        newOuter.appendChild(newLabel);
+    }
+
+    document.querySelector("body").appendChild(newOuter);
+}
+addThemePicker()
+showThemePicker()

@@ -1,0 +1,76 @@
+$theme-picker-maxheight: 150px;
+
+.theme-picker-button {
+    position: fixed;
+    display: inline-flex;
+    align-items: center;
+    top: 0;
+    left: 0;
+    z-index: 20;
+    height: 48px;
+    padding: 0 16px;
+    color: #fff;
+    font-family: "Proxima Nova", "Helvetica Neue", arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.5;
+    font-weight: 700;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: 0.25s ease-in-out;
+    transition-property: background-color, color;
+    user-select: none;
+
+    &:hover {
+        background-color: #f23a1d;
+        & ~ .theme-picker {
+            max-height: $theme-picker-maxheight;
+        }
+    }
+}
+
+.theme-picker {
+    font-family: "Proxima Nova", "Helvetica Neue", arial, sans-serif;
+    display: inline-flex;
+    flex-direction: column;
+    width: 200px;
+    background-color: #eee;
+    position: fixed;
+    top: 48px;
+    left: 0;
+    z-index: 20;
+
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height 0.25s ease-in-out;
+    user-select: none;
+
+    &:hover {
+        max-height: $theme-picker-maxheight;
+    }
+
+    label {
+        padding: 8px 16px;
+        cursor: pointer;
+        &:hover {
+            background-color: #ddd;
+        }
+        &:first-child {
+            margin-top: 8px;
+        }
+        &:last-child {
+            margin-bottom: 8px;
+        }
+        input[type="radio"] {
+            display: none;
+
+            &:checked + span {
+                font-weight: bold;
+            }
+        }
+    }
+}
+
+// center logo on mobile so there is space for theme picker
+.o-header {
+    text-align: center;
+}

@@ -331,17 +331,21 @@ html.t-bonk .due-walk {
   transform: rotateY(180deg);
 }
 
-html:not([class*=t-]) .o-userDetails__image {
+html:not([class*=t-]) .o-userDetails__image,
+html.t-totm .o-userDetails__image {
   background-size: 100% 200%;
   animation: squishy_kf 1s ease-in-out infinite alternate;
 }
-html:not([class*=t-]) .o-userPreview__image {
+html:not([class*=t-]) .o-userPreview__image,
+html.t-totm .o-userPreview__image {
   background-size: 100% 200%;
 }
-html:not([class*=t-]) .o-userPreview__imageContainer {
+html:not([class*=t-]) .o-userPreview__imageContainer,
+html.t-totm .o-userPreview__imageContainer {
   overflow: visible;
 }
-html:not([class*=t-]) .o-userPreview__imageContainer::after {
+html:not([class*=t-]) .o-userPreview__imageContainer::after,
+html.t-totm .o-userPreview__imageContainer::after {
   content: "";
   display: none;
   position: absolute;
@@ -356,7 +360,8 @@ html:not([class*=t-]) .o-userPreview__imageContainer::after {
   background-position: center;
   pointer-events: none;
 }
-html:not([class*=t-]) .o-userPreview__imageContainer::before {
+html:not([class*=t-]) .o-userPreview__imageContainer::before,
+html.t-totm .o-userPreview__imageContainer::before {
   content: "";
   display: none;
   position: absolute;
@@ -374,10 +379,12 @@ html:not([class*=t-]) .o-userPreview__imageContainer::before {
   transform: rotate(290deg);
   animation: swing_bat_kf 1s ease-in-out infinite alternate;
 }
-html:not([class*=t-]) .o-userPreview:hover .o-userPreview__image {
+html:not([class*=t-]) .o-userPreview:hover .o-userPreview__image,
+html.t-totm .o-userPreview:hover .o-userPreview__image {
   animation: squishy_kf 1s ease-in-out infinite alternate;
 }
-html:not([class*=t-]) .o-userPreview:hover .o-userPreview__image::before {
+html:not([class*=t-]) .o-userPreview:hover .o-userPreview__image::before,
+html.t-totm .o-userPreview:hover .o-userPreview__image::before {
   content: "*BONK*";
   position: absolute;
   top: -14%;
@@ -386,21 +393,98 @@ html:not([class*=t-]) .o-userPreview:hover .o-userPreview__image::before {
   visibility: hidden;
   animation: bonk_kf 1s ease-in-out infinite alternate;
 }
-html:not([class*=t-]) .o-userPreview:hover .o-userPreview__imageContainer::after {
+html:not([class*=t-]) .o-userPreview:hover .o-userPreview__imageContainer::after,
+html.t-totm .o-userPreview:hover .o-userPreview__imageContainer::after {
   display: block;
 }
-html:not([class*=t-]) .o-userPreview:hover .o-userPreview__imageContainer::before {
+html:not([class*=t-]) .o-userPreview:hover .o-userPreview__imageContainer::before,
+html.t-totm .o-userPreview:hover .o-userPreview__imageContainer::before {
   display: block;
 }
-html:not([class*=t-]) .more-dullan {
+html:not([class*=t-]) .more-dullan,
+html.t-totm .more-dullan {
   background-image: url(./assets/more-doge.png);
   background-size: 90%;
   background-position: top;
 }
-html:not([class*=t-]) .due-walk {
+html:not([class*=t-]) .due-walk,
+html.t-totm .due-walk {
   background-image: url(./assets/doge-walk.gif);
   background-position: top;
   transform: rotateY(180deg);
+}
+
+.theme-picker-button {
+  position: fixed;
+  display: inline-flex;
+  align-items: center;
+  top: 0;
+  left: 0;
+  z-index: 20;
+  height: 48px;
+  padding: 0 16px;
+  color: #fff;
+  font-family: "Proxima Nova", "Helvetica Neue", arial, sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 700;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: 0.25s ease-in-out;
+  transition-property: background-color, color;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.theme-picker-button:hover {
+  background-color: #f23a1d;
+}
+.theme-picker-button:hover ~ .theme-picker {
+  max-height: 150px;
+}
+
+.theme-picker {
+  font-family: "Proxima Nova", "Helvetica Neue", arial, sans-serif;
+  display: inline-flex;
+  flex-direction: column;
+  width: 200px;
+  background-color: #eee;
+  position: fixed;
+  top: 48px;
+  left: 0;
+  z-index: 20;
+  overflow: hidden;
+  max-height: 0;
+  transition: max-height 0.25s ease-in-out;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+}
+.theme-picker:hover {
+  max-height: 150px;
+}
+.theme-picker label {
+  padding: 8px 16px;
+  cursor: pointer;
+}
+.theme-picker label:hover {
+  background-color: #ddd;
+}
+.theme-picker label:first-child {
+  margin-top: 8px;
+}
+.theme-picker label:last-child {
+  margin-bottom: 8px;
+}
+.theme-picker label input[type=radio] {
+  display: none;
+}
+.theme-picker label input[type=radio]:checked + span {
+  font-weight: bold;
+}
+
+.o-header {
+  text-align: center;
 }
 
 @keyframes kf_due-walk {
