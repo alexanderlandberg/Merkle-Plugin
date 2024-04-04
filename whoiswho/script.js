@@ -169,7 +169,7 @@ function addThemePicker() {
     document.querySelector("body").appendChild(newBtn);
 }
 
-let selectedTheme = "";
+let selectedTheme;
 const themeList = {
     "totm": {
         "id": "totm",
@@ -190,6 +190,7 @@ const themeList = {
 
 function showThemePicker() {
     console.log("THEME")
+    console.log(selectedTheme)
 
     // build theme picker
     let newOuter = document.createElement("div");
@@ -208,7 +209,9 @@ function showThemePicker() {
         newSpan.innerHTML = themeList[key[i]].emoji + themeList[key[i]].name;
 
         // set default selected radio button
-        if (themeList[key[i]].id === "totm") {
+        if (`t-${themeList[key[i]].id}` === selectedTheme) {
+            newInput.checked = true;
+        } else if (themeList[key[i]].id === "totm") {
             newInput.checked = true;
         }
 
@@ -219,6 +222,7 @@ function showThemePicker() {
             }
             selectedTheme = `t-${themeList[key[i]].id}`;
             document.querySelector("html").classList.add(selectedTheme);
+            setLocalStorage();
         });
 
         newLabel.appendChild(newInput);
@@ -227,6 +231,27 @@ function showThemePicker() {
     }
 
     document.querySelector("body").appendChild(newOuter);
+
 }
-addThemePicker()
-showThemePicker()
+
+// --- Local Storage ---
+function setLocalStorage() {
+    let localData = {
+        "selectedTheme": selectedTheme
+    }
+    localStorage.setItem("EasterEggPlugin", JSON.stringify(localData));
+}
+
+function addFromLocalStorage() {
+    let localData = JSON.parse(localStorage.getItem("EasterEggPlugin"));
+    if (localData) {
+        selectedTheme = localData.selectedTheme;
+        document.querySelector("html").classList.add(selectedTheme);
+    }
+}
+
+
+// --- Callbacks ---
+addFromLocalStorage();
+addThemePicker();
+showThemePicker();
