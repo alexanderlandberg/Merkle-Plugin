@@ -1,7 +1,7 @@
 $theme-picker-maxheight: 270px;
 
 .theme-picker-button {
-    position: fixed;
+    position: absolute;
     display: inline-flex;
     align-items: center;
     top: 0;
@@ -33,7 +33,7 @@ $theme-picker-maxheight: 270px;
     display: inline-flex;
     flex-direction: column;
     background-color: #eee;
-    position: fixed;
+    position: absolute;
     top: 48px;
     left: 0;
     z-index: 20;
