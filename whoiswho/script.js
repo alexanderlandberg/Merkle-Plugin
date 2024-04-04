@@ -186,6 +186,21 @@ const themeList = {
         "name": "Easter",
         "emoji": "🐣"
     },
+    "penguin": {
+        "id": "penguin",
+        "name": "Penguin",
+        "emoji": "🐧"
+    },
+    "valentines": {
+        "id": "valentines",
+        "name": "Valentines",
+        "emoji": "💝"
+    },
+    "bonk": {
+        "id": "bonk",
+        "name": "Bonk",
+        "emoji": "🐕"
+    },
 }
 
 function showThemePicker() {
@@ -206,7 +221,7 @@ function showThemePicker() {
         newInput.id = themeList[key[i]].id;
         newInput.value = themeList[key[i]].id;
         let newSpan = document.createElement("span");
-        newSpan.innerHTML = themeList[key[i]].emoji + themeList[key[i]].name;
+        newSpan.innerHTML = `${themeList[key[i]].emoji} ${themeList[key[i]].name}`;
 
         // set default selected radio button
         if (`t-${themeList[key[i]].id}` === selectedTheme) {

@@ -1,4 +1,4 @@
-$theme-picker-maxheight: 150px;
+$theme-picker-maxheight: 270px;
 
 .theme-picker-button {
     position: fixed;
@@ -10,7 +10,7 @@ $theme-picker-maxheight: 150px;
     height: 48px;
     padding: 0 16px;
     color: #fff;
-    font-family: "Proxima Nova", "Helvetica Neue", arial, sans-serif;
+    font-family: "Proxima Nova", "Helvetica Neue", arial, sans-serif !important;
     font-size: 14px;
     line-height: 1.5;
     font-weight: 700;
@@ -29,10 +29,9 @@ $theme-picker-maxheight: 150px;
 }
 
 .theme-picker {
-    font-family: "Proxima Nova", "Helvetica Neue", arial, sans-serif;
+    font-family: "Proxima Nova", "Helvetica Neue", arial, sans-serif !important;
     display: inline-flex;
     flex-direction: column;
-    width: 200px;
     background-color: #eee;
     position: fixed;
     top: 48px;

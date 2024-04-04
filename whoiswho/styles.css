@@ -78,7 +78,7 @@ html.t-christmas .a-main {
 }
 
 html.t-penguin * {
-  font-family: "Bloody", "Proxima Nova", "Helvetica Neue", arial, sans-serif !important;
+  font-family: "Bloody", "Proxima Nova", "Helvetica Neue", arial, sans-serif;
 }
 html.t-penguin .o-header,
 html.t-penguin .o-navigation {
@@ -135,7 +135,7 @@ html.t-penguin .dullan .o-userPreview__imageContainer::after {
 
 html.t-valentines * {
   cursor: url(./assets/cupid-arrow.png), auto !important;
-  font-family: "Valentines", "Proxima Nova", "Helvetica Neue", arial, sans-serif !important;
+  font-family: "Valentines", "Proxima Nova", "Helvetica Neue", arial, sans-serif;
 }
 html.t-valentines .u-col-12 {
   margin-bottom: 40px;
@@ -424,7 +424,7 @@ html.t-totm .due-walk {
   height: 48px;
   padding: 0 16px;
   color: #fff;
-  font-family: "Proxima Nova", "Helvetica Neue", arial, sans-serif;
+  font-family: "Proxima Nova", "Helvetica Neue", arial, sans-serif !important;
   font-size: 14px;
   line-height: 1.5;
   font-weight: 700;
@@ -440,14 +440,13 @@ html.t-totm .due-walk {
   background-color: #f23a1d;
 }
 .theme-picker-button:hover ~ .theme-picker {
-  max-height: 150px;
+  max-height: 270px;
 }
 
 .theme-picker {
-  font-family: "Proxima Nova", "Helvetica Neue", arial, sans-serif;
+  font-family: "Proxima Nova", "Helvetica Neue", arial, sans-serif !important;
   display: inline-flex;
   flex-direction: column;
-  width: 200px;
   background-color: #eee;
   position: fixed;
   top: 48px;
@@ -461,7 +460,7 @@ html.t-totm .due-walk {
           user-select: none;
 }
 .theme-picker:hover {
-  max-height: 150px;
+  max-height: 270px;
 }
 .theme-picker label {
   padding: 8px 16px;

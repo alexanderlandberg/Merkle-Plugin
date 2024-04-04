@@ -1,7 +1,7 @@
 @mixin theme-valentines {
     * {
         cursor: url(./assets/cupid-arrow.png), auto !important;
-        font-family: "Valentines", "Proxima Nova", "Helvetica Neue", arial, sans-serif !important;
+        font-family: "Valentines", "Proxima Nova", "Helvetica Neue", arial, sans-serif;
     }
     .u-col-12 {
         margin-bottom: 40px;
