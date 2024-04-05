@@ -26,6 +26,7 @@
   background-repeat: no-repeat;
   background-position: bottom;
   animation: kf_due-walk 15s linear infinite;
+  pointer-events: none;
 }
 
 .more-dullan {
@@ -36,8 +37,10 @@
   background-position: center;
   width: 200px;
   height: 150px;
-  transition: all 2s ease-in;
-  z-index: 99999;
+  transition: 2s ease-in;
+  transition-property: left, top, right;
+  z-index: 20;
+  pointer-events: none;
 }
 
 html.t-christmas .o-userPreview__imageContainer {
@@ -420,7 +423,7 @@ html.t-totm .due-walk {
   align-items: center;
   top: 0;
   left: 0;
-  z-index: 20;
+  z-index: 30;
   height: 48px;
   padding: 0 16px;
   color: #fff;
@@ -451,7 +454,7 @@ html.t-totm .due-walk {
   position: absolute;
   top: 48px;
   left: 0;
-  z-index: 20;
+  z-index: 30;
   overflow: hidden;
   max-height: 0;
   transition: max-height 0.25s ease-in-out;
