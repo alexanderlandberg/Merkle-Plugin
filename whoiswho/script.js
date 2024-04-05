@@ -160,9 +160,16 @@ function addNewInfo() {
     ]
     const profileNameList = document.querySelectorAll(".a-lead.o-userPreview__name");
     for (let i = 0; i < profileNameList.length; i++) {
+        let profile = profileNameList[i].closest(".u-col-12");
+
+        // swap alex
+        if (profileNameList[i].innerHTML.trim() === "Alexander Ellegaard Landberg") {
+            profile.parentNode.insertBefore(profile, profile.previousElementSibling);
+        }
+
+        // replace info
         const found = profileList.find((element) => element.name === profileNameList[i].innerHTML.trim())
         if (found) {
-            let profile = profileNameList[i].closest(".u-col-12");
             // replace image
             if (found.img) {
                 profile.querySelector(".o-userPreview__image").style.backgroundImage = `url(${found.img})`;
