@@ -5,7 +5,7 @@ if (window.location.href.indexOf("whoiswho.agency") > -1) {
         let dullanSelector = document.querySelector(".dullan");
         if (!dullanSelector) {
             addDullan();
-            addNewImages();
+            addNewInfo();
         }
     }, 10);
 }
@@ -113,25 +113,29 @@ function addMoreDullan() {
     }, 1000);
 }
 
-// --- Replace Images ---
+// --- Replace Info (Image / Name) ---
 
-function addNewImages() {
+function addNewInfo() {
     const profileList = [
+        {
+            "name": "Alexander Dons Lund",
+            "newName": "Alex #2"
+        },
+        {
+            "name": "Alexander Ellegaard Landberg",
+            "newName": "Alex #1"
+        },
         {
             "name": "Bobby Hollingsworth",
             "img": "https://alexanderlandberg.github.io/merkle-gifs/gifs/bobby.gif"
         },
         {
-            "name": "Thomas Gjermansen",
-            "img": "https://alexanderlandberg.github.io/merkle-gifs/gifs/tbone-scratch.gif"
+            "name": "Camilla Einfeldt",
+            "newTitle": "En ægte ostereje",
         },
         {
-            "name": "Sune Brodersen",
-            "img": "https://hips.hearstapps.com/hmg-prod/images/elvis-presley-american-rock-n-roll-legend-news-photo-1690830848.jpg"
-        },
-        {
-            "name": "Ulrik Mailand",
-            "img": "https://texasarchive.org/sites/default/files/images_end/test/2015_01674_tn.jpg"
+            "name": "Jill Hansen",
+            "img": "https://deadline.com/wp-content/uploads/2023/01/nicole-kidman-e1683567950769.jpg?w=1024"
         },
         {
             "name": "Nicklas Frandsen",
@@ -142,18 +146,35 @@ function addNewImages() {
             "img": "https://thewaltdisneycompany.com/app/uploads/2015/10/Bob_Iger.jpg"
         },
         {
-            "name": "Jill Hansen",
-            "img": "https://deadline.com/wp-content/uploads/2023/01/nicole-kidman-e1683567950769.jpg?w=1024"
-        }
+            "name": "Sune Brodersen",
+            "img": "https://hips.hearstapps.com/hmg-prod/images/elvis-presley-american-rock-n-roll-legend-news-photo-1690830848.jpg"
+        },
+        {
+            "name": "Thomas Gjermansen",
+            "img": "https://alexanderlandberg.github.io/merkle-gifs/gifs/tbone-scratch.gif"
+        },
+        {
+            "name": "Ulrik Mailand",
+            "img": "https://texasarchive.org/sites/default/files/images_end/test/2015_01674_tn.jpg"
+        },
     ]
     const profileNameList = document.querySelectorAll(".a-lead.o-userPreview__name");
     for (let i = 0; i < profileNameList.length; i++) {
-        for (let j = 0; j < profileList.length; j++) {
-            console.log("TEST")
-            if (profileNameList[i].innerHTML.includes(profileList[j].name)) {
-                let profile = profileNameList[i].closest(".u-col-12");
-                profile.querySelector(".o-userPreview__image").style.backgroundImage = `url(${profileList[j].img})`;
+        const found = profileList.find((element) => element.name === profileNameList[i].innerHTML.trim())
+        if (found) {
+            let profile = profileNameList[i].closest(".u-col-12");
+            // replace image
+            if (found.img) {
+                profile.querySelector(".o-userPreview__image").style.backgroundImage = `url(${found.img})`;
                 profile.querySelector(".o-userPreview__image").style.filter = "grayscale(1)";
+            }
+            // replace name
+            if (found.newName) {
+                profile.querySelector(".o-userPreview__name").innerHTML = found.newName;
+            }
+            // replace title
+            if (found.newTitle) {
+                profile.querySelector(".o-userPreview__title").innerHTML = found.newTitle;
             }
         }
     }
@@ -204,8 +225,6 @@ const themeList = {
 }
 
 function showThemePicker() {
-    console.log("THEME")
-    console.log(selectedTheme)
 
     // build theme picker
     let newOuter = document.createElement("div");
