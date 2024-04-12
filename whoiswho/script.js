@@ -135,19 +135,19 @@ function addNewInfo() {
         },
         {
             "name": "Jill Hansen",
-            "img": "https://deadline.com/wp-content/uploads/2023/01/nicole-kidman-e1683567950769.jpg?w=1024"
+            "img": "https://alexanderlandberg.github.io/Merkle-Plugin/whoiswho/assets/profile-images/nicole-kidman.webp"
         },
         {
             "name": "Nicklas Frandsen",
-            "img": "https://img6.fresherslive.com/latestnews/2023/05/taylor-lautner-ethnicity-what-is-taylor-lautner-ethnicity-6476c35b8b71e63598516-900.webp"
+            "img": "https://alexanderlandberg.github.io/Merkle-Plugin/whoiswho/assets/profile-images/taylor-lautner.jpeg"
         },
         {
             "name": "Robert Ayzma",
-            "img": "https://thewaltdisneycompany.com/app/uploads/2015/10/Bob_Iger.jpg"
+            "img": "https://alexanderlandberg.github.io/Merkle-Plugin/whoiswho/assets/profile-images/bob-iger.jpeg"
         },
         {
             "name": "Sune Brodersen",
-            "img": "https://hips.hearstapps.com/hmg-prod/images/elvis-presley-american-rock-n-roll-legend-news-photo-1690830848.jpg"
+            "img": "https://alexanderlandberg.github.io/Merkle-Plugin/whoiswho/assets/profile-images/elvis.jpeg"
         },
         {
             "name": "Thomas Gjermansen",
@@ -155,7 +155,7 @@ function addNewInfo() {
         },
         {
             "name": "Ulrik Mailand",
-            "img": "https://texasarchive.org/sites/default/files/images_end/test/2015_01674_tn.jpg"
+            "img": "https://alexanderlandberg.github.io/Merkle-Plugin/whoiswho/assets/profile-images/john-malkovich.jpeg"
         },
     ]
     const profileNameList = document.querySelectorAll(".a-lead.o-userPreview__name");
@@ -163,8 +163,8 @@ function addNewInfo() {
         let profile = profileNameList[i].closest(".u-col-12");
 
         // swap alex
-        if (profileNameList[i].innerHTML.trim() === "Alexander Ellegaard Landberg") {
-            profile.parentNode.insertBefore(profile, profile.previousElementSibling);
+        if (profileNameList[i].innerHTML.trim() === "Alexander Dons Lund" && profile.nextElementSibling.querySelector(".o-userPreview__name").innerHTML.trim() === "Alexander Ellegaard Landberg") {
+            profile.nextElementSibling.parentNode.insertBefore(profile.nextElementSibling, profile);
         }
 
         // replace info
