@@ -10,10 +10,11 @@
 @import "scss/themes/valentines";
 @import "scss/themes/easter";
 @import "scss/themes/bonk";
+@import "scss/themes/star-wars";
 
 html:not([class*="t-"]),
 html.t-totm {
-    @include theme-bonk;
+    // @include theme-bonk;
 }
 
 // Theme picker

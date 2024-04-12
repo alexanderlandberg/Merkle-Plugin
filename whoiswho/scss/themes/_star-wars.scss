@@ -1,0 +1,42 @@
+@mixin theme-star-wars {
+    // lightsaber
+    .o-userPreview__line:after {
+    }
+    .o-userPreview__line {
+        margin: 1.5rem 0;
+        // handle
+        &:before {
+            content: "";
+            position: absolute;
+            left: 30px;
+            top: -50px;
+            width: 30px;
+            height: 100px;
+            z-index: 10;
+            background-image: url(./assets/lightsaber_handle.png);
+            transform: rotate(90deg);
+            background-repeat: no-repeat;
+            background-size: contain;
+            background-position: center;
+        }
+        // blade
+        &:after {
+            background-color: #fff;
+            box-shadow:
+                0 0 5px #fff,
+                0 0 8px #fff,
+                0 0 12px #fff,
+                0 0 15px blue,
+                0 0 25px blue;
+            transition: width 0.5s ease-in-out;
+            width: 0;
+            left: 85px;
+        }
+    }
+    .o-userPreview:hover .o-userPreview__line:after {
+        width: calc(100% - 85px);
+    }
+}
+html.t-star-wars {
+    @include theme-star-wars;
+}
