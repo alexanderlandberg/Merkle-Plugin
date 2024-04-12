@@ -1,9 +1,8 @@
 @mixin theme-star-wars {
     // lightsaber
-    .o-userPreview__line:after {
-    }
     .o-userPreview__line {
         margin: 1.5rem 0;
+        background: unset;
         // handle
         &:before {
             content: "";
@@ -22,12 +21,6 @@
         // blade
         &:after {
             background-color: #fff;
-            box-shadow:
-                0 0 5px #fff,
-                0 0 8px #fff,
-                0 0 12px #fff,
-                0 0 15px blue,
-                0 0 25px blue;
             transition: width 0.5s ease-in-out;
             width: 0;
             left: 85px;
@@ -35,6 +28,41 @@
     }
     .o-userPreview:hover .o-userPreview__line:after {
         width: calc(100% - 85px);
+    }
+    // lightsaber colors
+    .u-col-12 {
+        &:nth-child(4n + 1) .o-userPreview__line:after {
+            box-shadow:
+                0 0 5px #fff,
+                0 0 8px #fff,
+                0 0 12px #fff,
+                0 0 15px blue,
+                0 0 25px blue;
+        }
+        &:nth-child(4n + 2) .o-userPreview__line:after {
+            box-shadow:
+                0 0 5px #fff,
+                0 0 8px #fff,
+                0 0 12px #fff,
+                0 0 15px red,
+                0 0 25px red;
+        }
+        &:nth-child(4n + 3) .o-userPreview__line:after {
+            box-shadow:
+                0 0 5px #fff,
+                0 0 8px #fff,
+                0 0 12px #fff,
+                0 0 15px green,
+                0 0 25px green;
+        }
+        &:nth-child(4n + 4) .o-userPreview__line:after {
+            box-shadow:
+                0 0 5px #fff,
+                0 0 8px #fff,
+                0 0 12px #fff,
+                0 0 15px purple,
+                0 0 25px purple;
+        }
     }
 }
 html.t-star-wars {
