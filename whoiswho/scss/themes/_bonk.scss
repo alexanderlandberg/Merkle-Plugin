@@ -62,14 +62,15 @@
             display: block;
         }
     }
-    .more-dullan {
+    .popping {
         background-image: url(./assets/more-doge.png);
         background-size: 70%;
         background-position: 50% 110%;
     }
-    .due-walk {
+    .sliding {
         background-image: url(./assets/doge-walk.gif);
-        background-position: top;
+        background-size: 70%;
+        background-position: bottom;
         transform: rotateY(180deg);
     }
 }

@@ -1,4 +1,4 @@
-// --- Add Dullan ---
+// --- Init ---
 
 if (window.location.href.indexOf("whoiswho.agency") > -1) {
     setInterval(() => {
@@ -9,6 +9,8 @@ if (window.location.href.indexOf("whoiswho.agency") > -1) {
         }
     }, 10);
 }
+
+// --- Dullan ---
 
 function addDullan() {
     let html = `<div class="o-userPreview o-usersList__user" wire:click="$emitTo('organisms.user-details', 'show', '33d3e70f-60e1-4b21-8126-d543ae4e8777')">
@@ -38,37 +40,39 @@ function addDullan() {
     profileWrapper.insertBefore(newProfile, profileWrapper.firstChild);
 }
 
+// --- Easer Egg ---
+
 function easterEgg() {
-    addMoreDullan()
-    addDueWalk()
+    addPopping()
+    addSliding()
 }
 
-function addDueWalk() {
+function addSliding() {
     let newDiv = document.createElement("div");
-    newDiv.classList.add("due-walk");
+    newDiv.classList.add("sliding");
     document.body.appendChild(newDiv);
 
     setTimeout(() => {
         let newDiv2 = document.createElement("div");
-        newDiv2.classList.add("due-walk");
+        newDiv2.classList.add("sliding");
         document.body.appendChild(newDiv2);
     }, 3750);
     setTimeout(() => {
         let newDiv2 = document.createElement("div");
-        newDiv2.classList.add("due-walk");
+        newDiv2.classList.add("sliding");
         document.body.appendChild(newDiv2);
     }, 7500);
     setTimeout(() => {
         let newDiv2 = document.createElement("div");
-        newDiv2.classList.add("due-walk");
+        newDiv2.classList.add("sliding");
         document.body.appendChild(newDiv2);
     }, 11250);
 }
 
-function addMoreDullan() {
+function addPopping() {
 
     let newDiv = document.createElement("div");
-    newDiv.classList.add("more-dullan");
+    newDiv.classList.add("popping");
     document.body.appendChild(newDiv);
 
     let randomNr = Math.floor(Math.random() * (3) + 1);
@@ -94,11 +98,11 @@ function addMoreDullan() {
     }
 
     setTimeout(() => {
-        addMoreDullan();
+        addPopping();
     }, 1000);
 }
 
-// --- Replace Info (Image / Name) ---
+// --- Add name classes to all profiless ---
 
 function addNameClasses() {
     const profileNameList = document.querySelectorAll(".a-lead.o-userPreview__name");
@@ -205,6 +209,7 @@ function showThemePicker() {
 }
 
 // --- Local Storage ---
+
 function setLocalStorage() {
     let localData = {
         "selectedTheme": selectedTheme

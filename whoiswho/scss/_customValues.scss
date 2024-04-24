@@ -26,6 +26,10 @@
     filter: grayscale(1);
 }
 
+.dullan {
+    @include replaceImg("./assets/dullan.jpg");
+}
+
 .alexander-ellegaard-landberg {
     @include replaceName("Alex #1");
 }
@@ -42,28 +46,20 @@
     @include replaceTitle("En ægte ostereje");
 }
 .jill-hansen {
-    @include replaceImg(
-        "https://alexanderlandberg.github.io/Merkle-Plugin/whoiswho/assets/profile-images/nicole-kidman.webp"
-    );
+    @include replaceImg("./assets/profile-images/nicole-kidman.webp");
 }
 .nicklas-frandsen {
-    @include replaceImg(
-        "https://alexanderlandberg.github.io/Merkle-Plugin/whoiswho/assets/profile-images/taylor-lautner.jpeg"
-    );
+    @include replaceImg("./assets/profile-images/taylor-lautner.jpeg");
 }
 .robert-ayzma {
-    @include replaceImg(
-        "https://alexanderlandberg.github.io/Merkle-Plugin/whoiswho/assets/profile-images/bob-iger.jpeg"
-    );
+    @include replaceImg("./assets/profile-images/bob-iger.jpeg");
 }
 .sune-brodersen {
-    @include replaceImg("https://alexanderlandberg.github.io/Merkle-Plugin/whoiswho/assets/profile-images/elvis.jpeg");
+    @include replaceImg("./assets/profile-images/elvis.jpeg");
 }
 .thomas-gjermansen {
     @include replaceImg("https://alexanderlandberg.github.io/merkle-gifs/gifs/tbone-scratch.gif");
 }
 .ulrik-mailand {
-    @include replaceImg(
-        "https://alexanderlandberg.github.io/Merkle-Plugin/whoiswho/assets/profile-images/john-malkovich.jpeg"
-    );
+    @include replaceImg("./assets/profile-images/john-malkovich.jpeg");
 }

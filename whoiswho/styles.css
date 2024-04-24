@@ -11,29 +11,24 @@
   font-style: normal;
   src: url(./fonts/valentines.ttf) format("truetype");
 }
-.dullan .o-userPreview__image {
-  background-image: url(./assets/dullan.jpg);
-  filter: grayscale(1);
-}
-
-.due-walk {
+.sliding {
   position: fixed;
   bottom: -4px;
   left: -200px;
   width: 200px;
   height: 200px;
-  background-image: url(./assets/due-walk.gif);
+  background-image: url(./assets/sliding.gif);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: bottom;
-  animation: kf_due-walk 15s linear infinite;
+  animation: kf_sliding 15s linear infinite;
   z-index: 20;
   pointer-events: none;
 }
 
-.more-dullan {
+.popping {
   position: fixed;
-  background-image: url(./assets/more-dullan.webp);
+  background-image: url(./assets/popping.webp);
   background-size: 80%;
   background-repeat: no-repeat;
   background-position: center bottom;
@@ -44,21 +39,25 @@
   z-index: 20;
   pointer-events: none;
 }
-.more-dullan.top {
+.popping.top {
   top: -150px;
   transform: rotate(180deg);
 }
-.more-dullan.left {
+.popping.left {
   left: -150px;
   transform: rotate(90deg);
 }
-.more-dullan.right {
+.popping.right {
   right: -150px;
   transform: rotate(-90deg);
 }
 
 .o-userPreview__image {
   filter: grayscale(1);
+}
+
+.dullan .o-userPreview__image {
+  background-image: url("./assets/dullan.jpg") !important;
 }
 
 .alexander-ellegaard-landberg .o-userPreview__name {
@@ -98,19 +97,19 @@
 }
 
 .jill-hansen .o-userPreview__image {
-  background-image: url("https://alexanderlandberg.github.io/Merkle-Plugin/whoiswho/assets/profile-images/nicole-kidman.webp") !important;
+  background-image: url("./assets/profile-images/nicole-kidman.webp") !important;
 }
 
 .nicklas-frandsen .o-userPreview__image {
-  background-image: url("https://alexanderlandberg.github.io/Merkle-Plugin/whoiswho/assets/profile-images/taylor-lautner.jpeg") !important;
+  background-image: url("./assets/profile-images/taylor-lautner.jpeg") !important;
 }
 
 .robert-ayzma .o-userPreview__image {
-  background-image: url("https://alexanderlandberg.github.io/Merkle-Plugin/whoiswho/assets/profile-images/bob-iger.jpeg") !important;
+  background-image: url("./assets/profile-images/bob-iger.jpeg") !important;
 }
 
 .sune-brodersen .o-userPreview__image {
-  background-image: url("https://alexanderlandberg.github.io/Merkle-Plugin/whoiswho/assets/profile-images/elvis.jpeg") !important;
+  background-image: url("./assets/profile-images/elvis.jpeg") !important;
 }
 
 .thomas-gjermansen .o-userPreview__image {
@@ -118,7 +117,7 @@
 }
 
 .ulrik-mailand .o-userPreview__image {
-  background-image: url("https://alexanderlandberg.github.io/Merkle-Plugin/whoiswho/assets/profile-images/john-malkovich.jpeg") !important;
+  background-image: url("./assets/profile-images/john-malkovich.jpeg") !important;
 }
 
 html.t-christmas .o-userPreview__imageContainer {
@@ -181,12 +180,12 @@ html.t-penguin .a-main::after {
   background-image: url(./assets/rain.webp);
   background-size: 50% auto;
 }
-html.t-penguin .more-dullan {
+html.t-penguin .popping {
   background-image: url(./assets/more-penguin.webp);
   background-size: 90%;
   background-position: 50% 80px;
 }
-html.t-penguin .due-walk {
+html.t-penguin .sliding {
   background-image: url(./assets/penguin-walk.gif);
   background-size: 140%;
   background-position: top;
@@ -244,12 +243,12 @@ html.t-valentines .a-main::after {
   z-index: -1;
   background-image: url(https://i.pinimg.com/originals/fe/83/c9/fe83c9ef4f04297233036cb187c92813.gif);
 }
-html.t-valentines .more-dullan {
+html.t-valentines .popping {
   background-image: url(https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/13645/cupid-shooting-arrow-clipart-md.png);
   background-size: 90%;
   background-position: 50% 80px;
 }
-html.t-valentines .due-walk {
+html.t-valentines .sliding {
   background-image: url(https://i.giphy.com/3ohs4CoKEBL9QNUglq.webp);
   background-position: top;
   transform: rotateY(180deg);
@@ -328,14 +327,14 @@ html.t-easter .a-main {
   background-image: url(./assets/easter-pattern.jpeg);
   background-size: 50% auto;
 }
-html.t-easter .more-dullan {
+html.t-easter .popping {
   background-image: url(./assets/easter-egg.png);
   background-size: 90%;
   background-position: 50% 40px;
   width: 140px;
   height: 140px;
 }
-html.t-easter .due-walk {
+html.t-easter .sliding {
   background-image: url(./assets/easter-bunny-jump.gif);
   background-position: top;
 }
@@ -401,14 +400,15 @@ html.t-bonk .o-userPreview:hover .o-userPreview__imageContainer::after {
 html.t-bonk .o-userPreview:hover .o-userPreview__imageContainer::before {
   display: block;
 }
-html.t-bonk .more-dullan {
+html.t-bonk .popping {
   background-image: url(./assets/more-doge.png);
   background-size: 70%;
   background-position: 50% 110%;
 }
-html.t-bonk .due-walk {
+html.t-bonk .sliding {
   background-image: url(./assets/doge-walk.gif);
-  background-position: top;
+  background-size: 70%;
+  background-position: bottom;
   transform: rotateY(180deg);
 }
 
@@ -522,16 +522,17 @@ html:not([class*=t-]) .o-userPreview:hover .o-userPreview__imageContainer::befor
 html.t-totm .o-userPreview:hover .o-userPreview__imageContainer::before {
   display: block;
 }
-html:not([class*=t-]) .more-dullan,
-html.t-totm .more-dullan {
+html:not([class*=t-]) .popping,
+html.t-totm .popping {
   background-image: url(./assets/more-doge.png);
   background-size: 70%;
   background-position: 50% 110%;
 }
-html:not([class*=t-]) .due-walk,
-html.t-totm .due-walk {
+html:not([class*=t-]) .sliding,
+html.t-totm .sliding {
   background-image: url(./assets/doge-walk.gif);
-  background-position: top;
+  background-size: 70%;
+  background-position: bottom;
   transform: rotateY(180deg);
 }
 
@@ -607,7 +608,7 @@ html.t-totm .due-walk {
   text-align: center;
 }
 
-@keyframes kf_due-walk {
+@keyframes kf_sliding {
   100% {
     left: 100%;
   }
