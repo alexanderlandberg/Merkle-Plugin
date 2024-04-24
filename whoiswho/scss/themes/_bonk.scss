@@ -17,7 +17,7 @@
             left: 70%;
             top: -42%;
             z-index: 10;
-            background-image: url(./assets/bonk-doge.png);
+            background-image: url(./assets/themes/bonk/bonk-doge.png);
             background-repeat: no-repeat;
             background-size: contain;
             background-position: center;
@@ -32,7 +32,7 @@
             left: 70%;
             top: -18%;
             z-index: 11;
-            background-image: url(./assets/bonk-bat.png);
+            background-image: url(./assets/themes/bonk/bonk-bat.png);
             background-repeat: no-repeat;
             background-size: contain;
             background-position: center;
@@ -63,12 +63,12 @@
         }
     }
     .popping {
-        background-image: url(./assets/more-doge.png);
+        background-image: url(./assets/themes/bonk/more-doge.png);
         background-size: 70%;
         background-position: 50% 110%;
     }
     .sliding {
-        background-image: url(./assets/doge-walk.gif);
+        background-image: url(./assets/themes/bonk/doge-walk.gif);
         background-size: 70%;
         background-position: bottom;
         transform: rotateY(180deg);

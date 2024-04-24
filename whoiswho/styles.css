@@ -41,7 +41,7 @@
   left: -200px;
   width: 200px;
   height: 200px;
-  background-image: url(./assets/due-walk.gif);
+  background-image: url(./assets/dullan/due-walk.gif);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: bottom;
@@ -51,7 +51,7 @@
 
 .popping {
   position: fixed;
-  background-image: url(./assets/more-dullan.webp);
+  background-image: url(./assets/dullan/more-dullan.webp);
   background-size: 80%;
   background-repeat: no-repeat;
   background-position: center bottom;
@@ -88,7 +88,7 @@
 }
 
 .dullan .o-userPreview__image {
-  background-image: url("./assets/dullan.jpg") !important;
+  background-image: url("./assets/dullan/dullan.jpg") !important;
 }
 
 .alexander-ellegaard-landberg .o-userPreview__name {
@@ -162,7 +162,7 @@ html.t-christmas .o-userPreview__imageContainer::after {
   height: 68%;
   left: 33.5%;
   top: -32.5%;
-  background-image: url(./assets/christmas-hat.png);
+  background-image: url(./assets/themes/christmas/christmas-hat.png);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -184,7 +184,7 @@ html.t-christmas .a-main {
   background-color: #cf0004;
 }
 html.t-christmas .a-main {
-  background-image: url(./assets/snowing.webp);
+  background-image: url(./assets/themes/christmas/snowing.webp);
   background-size: 50% auto;
 }
 
@@ -208,16 +208,16 @@ html.t-penguin .a-main::after {
   z-index: -1;
   opacity: 0.4;
   background-color: #c8cee9;
-  background-image: url(./assets/rain.webp);
+  background-image: url(./assets/themes/penguin/rain.webp);
   background-size: 50% auto;
 }
 html.t-penguin .popping {
-  background-image: url(./assets/more-penguin.webp);
+  background-image: url(./assets/themes/penguin/more-penguin.webp);
   background-size: 90%;
   background-position: 50% 80px;
 }
 html.t-penguin .sliding {
-  background-image: url(./assets/penguin-walk.gif);
+  background-image: url(./assets/themes/penguin/penguin-walk.gif);
   background-size: 140%;
   background-position: top;
 }
@@ -232,7 +232,7 @@ html.t-penguin .o-userPreview__imageContainer::after {
   height: 58%;
   left: 29.5%;
   top: -27%;
-  background-image: url(./assets/penguin-hat.png);
+  background-image: url(./assets/themes/penguin/penguin-hat.png);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -245,7 +245,7 @@ html.t-penguin .dullan .o-userPreview__imageContainer::after {
 }
 
 html.t-valentines * {
-  cursor: url(./assets/cupid-arrow.png), auto !important;
+  cursor: url(./assets/themes/valentines/cupid-arrow.png), auto !important;
   font-family: "Valentines", "Proxima Nova", "Helvetica Neue", arial, sans-serif;
 }
 html.t-valentines .u-col-12 {
@@ -272,15 +272,15 @@ html.t-valentines .a-main::after {
   top: 0;
   left: 0;
   z-index: -1;
-  background-image: url(https://i.pinimg.com/originals/fe/83/c9/fe83c9ef4f04297233036cb187c92813.gif);
+  background-image: url(./assets/themes/valentines/background.gif);
 }
 html.t-valentines .popping {
-  background-image: url(https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/13645/cupid-shooting-arrow-clipart-md.png);
+  background-image: url(./assets/themes/valentines/cupid.png);
   background-size: 90%;
   background-position: 50% 80px;
 }
 html.t-valentines .sliding {
-  background-image: url(https://i.giphy.com/3ohs4CoKEBL9QNUglq.webp);
+  background-image: url(./assets/themes/valentines/spongebob.webp);
   background-position: top;
   transform: rotateY(180deg);
 }
@@ -301,7 +301,7 @@ html.t-valentines .o-userPreview__imageContainer::after {
   height: 140%;
   left: -20%;
   top: -42%;
-  background-image: url(./assets/valentines-hat.png);
+  background-image: url(./assets/themes/valentines/valentines-hat.png);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -334,7 +334,7 @@ html.t-easter .o-userPreview__imageContainer::after {
   height: 61%;
   left: 28.5%;
   top: -34.5%;
-  background-image: url(./assets/easter-hat.webp);
+  background-image: url(./assets/themes/easter/easter-hat.webp);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -355,18 +355,18 @@ html.t-easter .a-button--transparent:hover {
   background-color: #ff7877;
 }
 html.t-easter .a-main {
-  background-image: url(./assets/easter-pattern.jpeg);
+  background-image: url(./assets/themes/easter/easter-pattern.jpeg);
   background-size: 50% auto;
 }
 html.t-easter .popping {
-  background-image: url(./assets/easter-egg.png);
+  background-image: url(./assets/themes/easter/easter-egg.png);
   background-size: 90%;
   background-position: 50% 40px;
   width: 140px;
   height: 140px;
 }
 html.t-easter .sliding {
-  background-image: url(./assets/easter-bunny-jump.gif);
+  background-image: url(./assets/themes/easter/easter-bunny-jump.gif);
   background-position: top;
 }
 
@@ -389,7 +389,7 @@ html.t-bonk .o-userPreview__imageContainer::after {
   left: 70%;
   top: -42%;
   z-index: 10;
-  background-image: url(./assets/bonk-doge.png);
+  background-image: url(./assets/themes/bonk/bonk-doge.png);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -404,7 +404,7 @@ html.t-bonk .o-userPreview__imageContainer::before {
   left: 70%;
   top: -18%;
   z-index: 11;
-  background-image: url(./assets/bonk-bat.png);
+  background-image: url(./assets/themes/bonk/bonk-bat.png);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -432,12 +432,12 @@ html.t-bonk .o-userPreview:hover .o-userPreview__imageContainer::before {
   display: block;
 }
 html.t-bonk .popping {
-  background-image: url(./assets/more-doge.png);
+  background-image: url(./assets/themes/bonk/more-doge.png);
   background-size: 70%;
   background-position: 50% 110%;
 }
 html.t-bonk .sliding {
-  background-image: url(./assets/doge-walk.gif);
+  background-image: url(./assets/themes/bonk/doge-walk.gif);
   background-size: 70%;
   background-position: bottom;
   transform: rotateY(180deg);
@@ -451,7 +451,7 @@ html.t-bonk .sliding {
 }
 
 html.t-star-wars .o-header {
-  background-image: url(./assets/theme-starwars/hyperspace.gif);
+  background-image: url(./assets/themes/starwars/hyperspace.gif);
   background-size: cover;
   background-position: center;
 }
@@ -463,7 +463,7 @@ html.t-star-wars .o-header .o-navigation__link {
   text-transform: lowercase;
 }
 html.t-star-wars .a-main {
-  background-image: url(./assets/theme-starwars/background.jpeg);
+  background-image: url(./assets/themes/starwars/background.jpeg);
   background-size: contain;
 }
 html.t-star-wars .o-intro {
@@ -509,7 +509,7 @@ html.t-star-wars .o-userPreview__line:before {
   width: 100px;
   height: 30px;
   z-index: 10;
-  background-image: url(./assets/theme-starwars/lightsaber-handle1.png);
+  background-image: url(./assets/themes/starwars/lightsaber-handle1.png);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -524,7 +524,7 @@ html.t-star-wars .o-userPreview:hover .o-userPreview__line:after {
   width: calc(100% - 85px);
 }
 html.t-star-wars .u-col-12:nth-child(4n+1) .o-userPreview__line:before {
-  background-image: url(./assets/theme-starwars/lightsaber-handle4.png);
+  background-image: url(./assets/themes/starwars/lightsaber-handle4.png);
   top: -18px;
 }
 html.t-star-wars .u-col-12:nth-child(4n+1) .o-userPreview__line:after {
@@ -534,7 +534,7 @@ html.t-star-wars .u-col-12:nth-child(4n+2) .o-userPreview__line:after {
   box-shadow: 0 0 5px #fff, 0 0 8px #fff, 0 0 12px #fff, 0 0 15px red, 0 0 25px red;
 }
 html.t-star-wars .u-col-12:nth-child(4n+3) .o-userPreview__line:before {
-  background-image: url(./assets/theme-starwars/lightsaber-handle2.png);
+  background-image: url(./assets/themes/starwars/lightsaber-handle2.png);
   top: -14px;
 }
 html.t-star-wars .u-col-12:nth-child(4n+3) .o-userPreview__line:after {
@@ -545,7 +545,7 @@ html.t-star-wars .u-col-12:nth-child(4n+3) .o-userPreview:hover .o-userPreview__
   width: calc(100% - 90px);
 }
 html.t-star-wars .u-col-12:nth-child(4n+4) .o-userPreview__line:before {
-  background-image: url(./assets/theme-starwars/lightsaber-handle3.png);
+  background-image: url(./assets/themes/starwars/lightsaber-handle3.png);
   top: -13.5px;
 }
 html.t-star-wars .u-col-12:nth-child(4n+4) .o-userPreview__line:after {
@@ -563,22 +563,22 @@ html.t-star-wars .popping.left.active {
 }
 html.t-star-wars .popping.left.active.type-a {
   margin-top: -200px;
-  background-image: url(./assets/theme-starwars/tiefighter2.png);
+  background-image: url(./assets/themes/starwars/tiefighter2.png);
 }
 html.t-star-wars .popping.left.active.type-b {
   margin-top: 200px;
-  background-image: url(./assets/theme-starwars/tiefighter.png);
+  background-image: url(./assets/themes/starwars/tiefighter.png);
 }
 html.t-star-wars .popping.right.active {
   right: 100%;
 }
 html.t-star-wars .popping.right.active.type-a {
   margin-top: -200px;
-  background-image: url(./assets/theme-starwars/ywing.png);
+  background-image: url(./assets/themes/starwars/ywing.png);
 }
 html.t-star-wars .popping.right.active.type-b {
   margin-top: 200px;
-  background-image: url(./assets/theme-starwars/xwing.png);
+  background-image: url(./assets/themes/starwars/xwing.png);
 }
 html.t-star-wars .sliding {
   background-image: url(https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExamUwNG0zdG13N2I2aHlzemQ5dW40MnFtZTFjdXFtMnRiaW54aTI0NyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/IE7mmA2PAZGww/giphy.gif);
@@ -610,7 +610,7 @@ html.t-totm .o-userPreview__imageContainer::after {
   left: 70%;
   top: -42%;
   z-index: 10;
-  background-image: url(./assets/bonk-doge.png);
+  background-image: url(./assets/themes/bonk/bonk-doge.png);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -626,7 +626,7 @@ html.t-totm .o-userPreview__imageContainer::before {
   left: 70%;
   top: -18%;
   z-index: 11;
-  background-image: url(./assets/bonk-bat.png);
+  background-image: url(./assets/themes/bonk/bonk-bat.png);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
@@ -659,13 +659,13 @@ html.t-totm .o-userPreview:hover .o-userPreview__imageContainer::before {
 }
 html:not([class*=t-]) .popping,
 html.t-totm .popping {
-  background-image: url(./assets/more-doge.png);
+  background-image: url(./assets/themes/bonk/more-doge.png);
   background-size: 70%;
   background-position: 50% 110%;
 }
 html:not([class*=t-]) .sliding,
 html.t-totm .sliding {
-  background-image: url(./assets/doge-walk.gif);
+  background-image: url(./assets/themes/bonk/doge-walk.gif);
   background-size: 70%;
   background-position: bottom;
   transform: rotateY(180deg);

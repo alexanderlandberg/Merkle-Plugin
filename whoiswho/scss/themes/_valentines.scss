@@ -1,6 +1,6 @@
 @mixin theme-valentines {
     * {
-        cursor: url(./assets/cupid-arrow.png), auto !important;
+        cursor: url(./assets/themes/valentines/cupid-arrow.png), auto !important;
         font-family: "Valentines", "Proxima Nova", "Helvetica Neue", arial, sans-serif;
     }
     .u-col-12 {
@@ -26,16 +26,16 @@
             top: 0;
             left: 0;
             z-index: -1;
-            background-image: url(https://i.pinimg.com/originals/fe/83/c9/fe83c9ef4f04297233036cb187c92813.gif);
+            background-image: url(./assets/themes/valentines/background.gif);
         }
     }
     .popping {
-        background-image: url(https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/13645/cupid-shooting-arrow-clipart-md.png);
+        background-image: url(./assets/themes/valentines/cupid.png);
         background-size: 90%;
         background-position: 50% 80px;
     }
     .sliding {
-        background-image: url(https://i.giphy.com/3ohs4CoKEBL9QNUglq.webp);
+        background-image: url(./assets/themes/valentines/spongebob.webp);
         background-position: top;
         transform: rotateY(180deg);
     }
@@ -63,7 +63,7 @@
         height: 140%;
         left: -20%;
         top: -42%;
-        background-image: url(./assets/valentines-hat.png);
+        background-image: url(./assets/themes/valentines/valentines-hat.png);
         background-repeat: no-repeat;
         background-size: contain;
         background-position: center;

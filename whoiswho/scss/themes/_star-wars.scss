@@ -8,7 +8,7 @@
 @mixin theme-star-wars {
     // Initial styling
     .o-header {
-        background-image: url(./assets/theme-starwars/hyperspace.gif);
+        background-image: url(./assets/themes/starwars/hyperspace.gif);
         background-size: cover;
         background-position: center;
         .o-navigation {
@@ -20,7 +20,7 @@
         }
     }
     .a-main {
-        background-image: url(./assets/theme-starwars/background.jpeg);
+        background-image: url(./assets/themes/starwars/background.jpeg);
         background-size: contain;
     }
     .o-intro {
@@ -68,7 +68,7 @@
             width: 100px;
             height: 30px;
             z-index: 10;
-            background-image: url(./assets/theme-starwars/lightsaber-handle1.png);
+            background-image: url(./assets/themes/starwars/lightsaber-handle1.png);
             background-repeat: no-repeat;
             background-size: contain;
             background-position: center;
@@ -88,7 +88,7 @@
     .u-col-12 {
         &:nth-child(4n + 1) {
             .o-userPreview__line:before {
-                background-image: url(./assets/theme-starwars/lightsaber-handle4.png);
+                background-image: url(./assets/themes/starwars/lightsaber-handle4.png);
                 top: -18px;
             }
             .o-userPreview__line:after {
@@ -112,7 +112,7 @@
         }
         &:nth-child(4n + 3) {
             .o-userPreview__line:before {
-                background-image: url(./assets/theme-starwars/lightsaber-handle2.png);
+                background-image: url(./assets/themes/starwars/lightsaber-handle2.png);
                 top: -14px;
             }
             .o-userPreview__line:after {
@@ -130,7 +130,7 @@
         }
         &:nth-child(4n + 4) {
             .o-userPreview__line:before {
-                background-image: url(./assets/theme-starwars/lightsaber-handle3.png);
+                background-image: url(./assets/themes/starwars/lightsaber-handle3.png);
                 top: -13.5px;
             }
             .o-userPreview__line:after {
@@ -155,22 +155,22 @@
             left: 100%;
             &.type-a {
                 margin-top: -200px;
-                background-image: url(./assets/theme-starwars/tiefighter2.png);
+                background-image: url(./assets/themes/starwars/tiefighter2.png);
             }
             &.type-b {
                 margin-top: 200px;
-                background-image: url(./assets/theme-starwars/tiefighter.png);
+                background-image: url(./assets/themes/starwars/tiefighter.png);
             }
         }
         &.right.active {
             right: 100%;
             &.type-a {
                 margin-top: -200px;
-                background-image: url(./assets/theme-starwars/ywing.png);
+                background-image: url(./assets/themes/starwars/ywing.png);
             }
             &.type-b {
                 margin-top: 200px;
-                background-image: url(./assets/theme-starwars/xwing.png);
+                background-image: url(./assets/themes/starwars/xwing.png);
             }
         }
     }

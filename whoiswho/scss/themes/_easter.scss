@@ -21,7 +21,7 @@
         height: 61%;
         left: 28.5%;
         top: -34.5%;
-        background-image: url(./assets/easter-hat.webp);
+        background-image: url(./assets/themes/easter/easter-hat.webp);
         background-repeat: no-repeat;
         background-size: contain;
         background-position: center;
@@ -45,18 +45,18 @@
     }
 
     .a-main {
-        background-image: url(./assets/easter-pattern.jpeg);
+        background-image: url(./assets/themes/easter/easter-pattern.jpeg);
         background-size: 50% auto;
     }
     .popping {
-        background-image: url(./assets/easter-egg.png);
+        background-image: url(./assets/themes/easter/easter-egg.png);
         background-size: 90%;
         background-position: 50% 40px;
         width: 140px;
         height: 140px;
     }
     .sliding {
-        background-image: url(./assets/easter-bunny-jump.gif);
+        background-image: url(./assets/themes/easter/easter-bunny-jump.gif);
         background-position: top;
     }
 }

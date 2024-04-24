@@ -18,17 +18,17 @@
             z-index: -1;
             opacity: 0.4;
             background-color: #c8cee9;
-            background-image: url(./assets/rain.webp);
+            background-image: url(./assets/themes/penguin/rain.webp);
             background-size: 50% auto;
         }
     }
     .popping {
-        background-image: url(./assets/more-penguin.webp);
+        background-image: url(./assets/themes/penguin/more-penguin.webp);
         background-size: 90%;
         background-position: 50% 80px;
     }
     .sliding {
-        background-image: url(./assets/penguin-walk.gif);
+        background-image: url(./assets/themes/penguin/penguin-walk.gif);
         background-size: 140%;
         background-position: top;
     }
@@ -45,7 +45,7 @@
         height: 58%;
         left: 29.5%;
         top: -27%;
-        background-image: url(./assets/penguin-hat.png);
+        background-image: url(./assets/themes/penguin/penguin-hat.png);
         background-repeat: no-repeat;
         background-size: contain;
         background-position: center;
