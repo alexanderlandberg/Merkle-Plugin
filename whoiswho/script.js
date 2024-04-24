@@ -1,15 +1,16 @@
 // --- Init ---
 
 if (window.location.href.indexOf("whoiswho.agency") > -1) {
-    let interval = setInterval(() => {
+    setInterval(() => {
         let dullanSelector = document.querySelector(".dullan");
         if (!dullanSelector) {
-            addFromLocalStorage();
-            addThemePicker();
-            showThemePicker();
+            if (!document.querySelector(".theme-picker")) {
+                addFromLocalStorage();
+                addThemePicker();
+                showThemePicker();
+            }
             addDullan();
             addNameClasses();
-            clearInterval(interval);
         }
     }, 10);
 }
@@ -47,11 +48,13 @@ function addDullan() {
 // --- Easer Egg ---
 
 function easterEgg() {
-    let newWrapper = document.createElement("div");
-    newWrapper.classList.add("easter-egg-wrapper");
-    document.body.appendChild(newWrapper);
-    addSliding(newWrapper)
-    addPopping(newWrapper)
+    if (!document.querySelector(".easter-egg-wrapper")) {
+        let newWrapper = document.createElement("div");
+        newWrapper.classList.add("easter-egg-wrapper");
+        document.body.appendChild(newWrapper);
+        addSliding(newWrapper)
+        addPopping(newWrapper)
+    }
 }
 
 function addSliding(wrapper) {

@@ -10,7 +10,7 @@
     background-position: bottom;
     animation: kf_sliding 15s linear infinite;
     z-index: 20;
-    // pointer-events: none;
+    pointer-events: none;
 }
 
 .popping {
@@ -24,7 +24,7 @@
     transition: 2s ease-in;
     transition-property: left, top, right;
     z-index: 20;
-    // pointer-events: none;
+    pointer-events: none;
     &.top {
         top: -200px;
         transform: rotate(180deg);

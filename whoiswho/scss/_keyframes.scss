@@ -35,3 +35,30 @@
         visibility: visible;
     }
 }
+
+@keyframes blaster_kf {
+    0% {
+        width: 0;
+        transform: translateX(0%);
+    }
+    89% {
+        width: 0;
+    }
+    90% {
+        width: 40px;
+        transform: translateX(0%);
+    }
+    100% {
+        width: 40px;
+        transform: translateX(800%);
+    }
+}
+
+@keyframes crawl_kf {
+    0% {
+        transform: perspective(400px) rotateX(25deg) translateY(120%);
+    }
+    100% {
+        transform: perspective(400px) rotateX(25deg) translateY(-150%);
+    }
+}
