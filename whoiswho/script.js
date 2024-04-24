@@ -5,7 +5,7 @@ if (window.location.href.indexOf("whoiswho.agency") > -1) {
         let dullanSelector = document.querySelector(".dullan");
         if (!dullanSelector) {
             addDullan();
-            addNewInfo();
+            addNameClasses();
         }
     }, 10);
 }
@@ -40,7 +40,7 @@ function addDullan() {
 
 function easterEgg() {
     addMoreDullan()
-    // addDueWalk()
+    addDueWalk()
 }
 
 function addDueWalk() {
@@ -94,80 +94,24 @@ function addMoreDullan() {
     }
 
     setTimeout(() => {
-        // addMoreDullan();
+        addMoreDullan();
     }, 1000);
 }
 
 // --- Replace Info (Image / Name) ---
 
-function addNewInfo() {
-    const profileList = [
-        {
-            "name": "Alexander Dons Lund",
-            "newName": "Alex #2"
-        },
-        {
-            "name": "Alexander Ellegaard Landberg",
-            "newName": "Alex #1"
-        },
-        {
-            "name": "Bobby Hollingsworth",
-            "img": "https://alexanderlandberg.github.io/merkle-gifs/gifs/bobby.gif"
-        },
-        {
-            "name": "Camilla Einfeldt",
-            "newTitle": "En ægte ostereje",
-        },
-        {
-            "name": "Jill Hansen",
-            "img": "https://alexanderlandberg.github.io/Merkle-Plugin/whoiswho/assets/profile-images/nicole-kidman.webp"
-        },
-        {
-            "name": "Nicklas Frandsen",
-            "img": "https://alexanderlandberg.github.io/Merkle-Plugin/whoiswho/assets/profile-images/taylor-lautner.jpeg"
-        },
-        {
-            "name": "Robert Ayzma",
-            "img": "https://alexanderlandberg.github.io/Merkle-Plugin/whoiswho/assets/profile-images/bob-iger.jpeg"
-        },
-        {
-            "name": "Sune Brodersen",
-            "img": "https://alexanderlandberg.github.io/Merkle-Plugin/whoiswho/assets/profile-images/elvis.jpeg"
-        },
-        {
-            "name": "Thomas Gjermansen",
-            "img": "https://alexanderlandberg.github.io/merkle-gifs/gifs/tbone-scratch.gif"
-        },
-        {
-            "name": "Ulrik Mailand",
-            "img": "https://alexanderlandberg.github.io/Merkle-Plugin/whoiswho/assets/profile-images/john-malkovich.jpeg"
-        },
-    ]
+function addNameClasses() {
     const profileNameList = document.querySelectorAll(".a-lead.o-userPreview__name");
     for (let i = 0; i < profileNameList.length; i++) {
         let profile = profileNameList[i].closest(".u-col-12");
 
+        // add name as class to all
+        let nameAsClass = profileNameList[i].innerHTML.trim().toLowerCase().split(' ').join('-');
+        profile.classList.add(nameAsClass);
+
         // swap alex
         if (profileNameList[i].innerHTML.trim() === "Alexander Dons Lund" && profile.nextElementSibling.querySelector(".o-userPreview__name").innerHTML.trim() === "Alexander Ellegaard Landberg") {
             profile.nextElementSibling.parentNode.insertBefore(profile.nextElementSibling, profile);
-        }
-
-        // replace info
-        const found = profileList.find((element) => element.name === profileNameList[i].innerHTML.trim())
-        if (found) {
-            // replace image
-            if (found.img) {
-                profile.querySelector(".o-userPreview__image").style.backgroundImage = `url(${found.img})`;
-                profile.querySelector(".o-userPreview__image").style.filter = "grayscale(1)";
-            }
-            // replace name
-            if (found.newName) {
-                profile.querySelector(".o-userPreview__name").innerHTML = found.newName;
-            }
-            // replace title
-            if (found.newTitle) {
-                profile.querySelector(".o-userPreview__title").innerHTML = found.newTitle;
-            }
         }
     }
 }

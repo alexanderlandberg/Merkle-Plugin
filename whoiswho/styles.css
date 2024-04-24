@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @font-face {
   font-family: "Bloody";
   font-weight: 400;
@@ -54,6 +55,70 @@
 .more-dullan.right {
   right: -150px;
   transform: rotate(-90deg);
+}
+
+.o-userPreview__image {
+  filter: grayscale(1);
+}
+
+.alexander-ellegaard-landberg .o-userPreview__name {
+  font-size: 0;
+}
+.alexander-ellegaard-landberg .o-userPreview__name::after {
+  content: "Alex #1";
+  font-size: 20px;
+}
+
+.alexander-dons-lund .o-userPreview__name {
+  font-size: 0;
+}
+.alexander-dons-lund .o-userPreview__name::after {
+  content: "Alex #2";
+  font-size: 20px;
+}
+
+.alexander-rothschild .o-userPreview__name {
+  font-size: 0;
+}
+.alexander-rothschild .o-userPreview__name::after {
+  content: "Alex #3";
+  font-size: 20px;
+}
+
+.bobby-hollingsworth .o-userPreview__image {
+  background-image: url("https://alexanderlandberg.github.io/merkle-gifs/gifs/bobby.gif") !important;
+}
+
+.camilla-einfeldt .o-userPreview__title {
+  font-size: 0;
+}
+.camilla-einfeldt .o-userPreview__title::after {
+  content: "En ægte ostereje";
+  font-size: 16px;
+}
+
+.jill-hansen .o-userPreview__image {
+  background-image: url("https://alexanderlandberg.github.io/Merkle-Plugin/whoiswho/assets/profile-images/nicole-kidman.webp") !important;
+}
+
+.nicklas-frandsen .o-userPreview__image {
+  background-image: url("https://alexanderlandberg.github.io/Merkle-Plugin/whoiswho/assets/profile-images/taylor-lautner.jpeg") !important;
+}
+
+.robert-ayzma .o-userPreview__image {
+  background-image: url("https://alexanderlandberg.github.io/Merkle-Plugin/whoiswho/assets/profile-images/bob-iger.jpeg") !important;
+}
+
+.sune-brodersen .o-userPreview__image {
+  background-image: url("https://alexanderlandberg.github.io/Merkle-Plugin/whoiswho/assets/profile-images/elvis.jpeg") !important;
+}
+
+.thomas-gjermansen .o-userPreview__image {
+  background-image: url("https://alexanderlandberg.github.io/merkle-gifs/gifs/tbone-scratch.gif") !important;
+}
+
+.ulrik-mailand .o-userPreview__image {
+  background-image: url("https://alexanderlandberg.github.io/Merkle-Plugin/whoiswho/assets/profile-images/john-malkovich.jpeg") !important;
 }
 
 html.t-christmas .o-userPreview__imageContainer {
