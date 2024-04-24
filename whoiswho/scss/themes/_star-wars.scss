@@ -1,4 +1,60 @@
+.test {
+    font-family: "Star Jedi";
+    font-family: "Distant Galaxy";
+    font-family: "News Gothic";
+    font-family: "Univers";
+}
+
 @mixin theme-star-wars {
+    // Initial styling
+    .o-header {
+        background-image: url(./assets/theme-starwars/hyperspace.gif);
+        background-size: cover;
+        background-position: center;
+        .o-navigation {
+            background: unset;
+        }
+        .o-navigation__link {
+            font-family: "Star Jedi", sans-serif;
+            text-transform: lowercase;
+        }
+    }
+    .a-main {
+        background-image: url(./assets/theme-starwars/background.jpeg);
+        background-size: contain;
+    }
+    .o-intro {
+        background: unset;
+        border: none;
+        .u-container {
+            max-width: 600px;
+            transform: perspective(400px) rotateX(25deg);
+        }
+        .o-intro__title {
+            font-family: "Univers", sans-serif;
+            font-weight: 300;
+            font-size: 10rem;
+            text-align: center;
+            color: #feed00;
+        }
+        .o-intro__description {
+            font-family: "News Gothic", sans-serif;
+            text-align: center;
+            color: #feed00;
+            text-align: justify;
+        }
+    }
+    .o-userPreview,
+    .o-userPreview:hover {
+        .o-userPreview__breadcrumb,
+        .o-userPreview__name,
+        .o-userPreview__title {
+            color: #46e5e8;
+            text-shadow: 0 0 3px #46e5e8;
+            font-family: "News Gothic";
+        }
+    }
+
     // lightsaber
     .o-userPreview__line {
         margin: 1.5rem 0;
@@ -7,13 +63,12 @@
         &:before {
             content: "";
             position: absolute;
-            left: 30px;
-            top: -50px;
-            width: 30px;
-            height: 100px;
+            left: 0px;
+            top: -15px;
+            width: 100px;
+            height: 30px;
             z-index: 10;
-            background-image: url(./assets/lightsaber_handle.png);
-            transform: rotate(90deg);
+            background-image: url(./assets/theme-starwars/lightsaber-handle1.png);
             background-repeat: no-repeat;
             background-size: contain;
             background-position: center;
@@ -31,53 +86,61 @@
     }
     // lightsaber colors
     .u-col-12 {
-        &:nth-child(4n + 1) .o-userPreview__line:after {
-            box-shadow:
-                0 0 5px #fff,
-                0 0 8px #fff,
-                0 0 12px #fff,
-                0 0 15px blue,
-                0 0 25px blue;
+        &:nth-child(4n + 1) {
+            .o-userPreview__line:before {
+                background-image: url(./assets/theme-starwars/lightsaber-handle4.png);
+                top: -18px;
+            }
+            .o-userPreview__line:after {
+                box-shadow:
+                    0 0 5px #fff,
+                    0 0 8px #fff,
+                    0 0 12px #fff,
+                    0 0 15px blue,
+                    0 0 25px blue;
+            }
         }
-        &:nth-child(4n + 2) .o-userPreview__line:after {
-            box-shadow:
-                0 0 5px #fff,
-                0 0 8px #fff,
-                0 0 12px #fff,
-                0 0 15px red,
-                0 0 25px red;
+        &:nth-child(4n + 2) {
+            .o-userPreview__line:after {
+                box-shadow:
+                    0 0 5px #fff,
+                    0 0 8px #fff,
+                    0 0 12px #fff,
+                    0 0 15px red,
+                    0 0 25px red;
+            }
         }
-        &:nth-child(4n + 3) .o-userPreview__line:after {
-            box-shadow:
-                0 0 5px #fff,
-                0 0 8px #fff,
-                0 0 12px #fff,
-                0 0 15px green,
-                0 0 25px green;
+        &:nth-child(4n + 3) {
+            .o-userPreview__line:before {
+                background-image: url(./assets/theme-starwars/lightsaber-handle2.png);
+                top: -14px;
+            }
+            .o-userPreview__line:after {
+                box-shadow:
+                    0 0 5px #fff,
+                    0 0 8px #fff,
+                    0 0 12px #fff,
+                    0 0 15px green,
+                    0 0 25px green;
+                left: 90px;
+            }
+            .o-userPreview:hover .o-userPreview__line:after {
+                width: calc(100% - 90px);
+            }
         }
-        &:nth-child(4n + 4) .o-userPreview__line:after {
-            box-shadow:
-                0 0 5px #fff,
-                0 0 8px #fff,
-                0 0 12px #fff,
-                0 0 15px purple,
-                0 0 25px purple;
-        }
-    }
-
-    // force choking
-    .o-userPreview__image {
-        &:hover::after {
-            content: "";
-            background-image: url(./assets/theme-starwars/force-choking.gif);
-            width: 100%;
-            top: 60%;
-            height: 100%;
-            position: absolute;
-            background-position: 130% 40%;
-            background-repeat: no-repeat;
-            background-size: 60%;
-            transform: rotate(317deg);
+        &:nth-child(4n + 4) {
+            .o-userPreview__line:before {
+                background-image: url(./assets/theme-starwars/lightsaber-handle3.png);
+                top: -13.5px;
+            }
+            .o-userPreview__line:after {
+                box-shadow:
+                    0 0 5px #fff,
+                    0 0 8px #fff,
+                    0 0 12px #fff,
+                    0 0 15px purple,
+                    0 0 25px purple;
+            }
         }
     }
 
