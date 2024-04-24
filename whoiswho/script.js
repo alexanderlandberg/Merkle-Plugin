@@ -1,14 +1,15 @@
 // --- Init ---
 
 if (window.location.href.indexOf("whoiswho.agency") > -1) {
-    setInterval(() => {
+    let interval = setInterval(() => {
         let dullanSelector = document.querySelector(".dullan");
         if (!dullanSelector) {
-            addDullan();
-            addNameClasses();
             addFromLocalStorage();
             addThemePicker();
             showThemePicker();
+            addDullan();
+            addNameClasses();
+            clearInterval(interval);
         }
     }, 10);
 }
@@ -87,22 +88,17 @@ function addPopping(wrapper) {
     if (randomNr === 1) {
         newDiv.classList.add("left");
         newDiv.style.top = `calc(${Math.floor(Math.random() * (100 - 0))}% - 100px)`;
-        setTimeout(() => {
-            newDiv.style.left = 0;
-        }, 1000);
     } else if (randomNr === 2) {
         newDiv.classList.add("top");
         newDiv.style.left = `calc(${Math.floor(Math.random() * (100 - 0))}% - 100px)`;
-        setTimeout(() => {
-            newDiv.style.top = 0;
-        }, 1000);
     } else {
         newDiv.classList.add("right");
         newDiv.style.top = `calc(${Math.floor(Math.random() * (100 - 0))}% - 100px)`;
-        setTimeout(() => {
-            newDiv.style.right = 0;
-        }, 1000);
     }
+    setTimeout(() => {
+        newDiv.classList.add("active");
+        newDiv.classList.add(Math.random() > 0.5 ? "type-a" : "type-b");
+    }, 1000);
 
     setTimeout(() => {
         addPopping(wrapper);

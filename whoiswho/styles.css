@@ -17,18 +17,17 @@
   left: -200px;
   width: 200px;
   height: 200px;
-  background-image: url(./assets/sliding.gif);
+  background-image: url(./assets/due-walk.gif);
   background-size: contain;
   background-repeat: no-repeat;
   background-position: bottom;
   animation: kf_sliding 15s linear infinite;
   z-index: 20;
-  pointer-events: none;
 }
 
 .popping {
   position: fixed;
-  background-image: url(./assets/popping.webp);
+  background-image: url(./assets/more-dullan.webp);
   background-size: 80%;
   background-repeat: no-repeat;
   background-position: center bottom;
@@ -37,19 +36,27 @@
   transition: 2s ease-in;
   transition-property: left, top, right;
   z-index: 20;
-  pointer-events: none;
 }
 .popping.top {
-  top: -150px;
+  top: -200px;
   transform: rotate(180deg);
 }
+.popping.top.active {
+  top: 0;
+}
 .popping.left {
-  left: -150px;
+  left: -200px;
   transform: rotate(90deg);
 }
+.popping.left.active {
+  left: 0;
+}
 .popping.right {
-  right: -150px;
+  right: -200px;
   transform: rotate(-90deg);
+}
+.popping.right.active {
+  right: 0;
 }
 
 .o-userPreview__image {
@@ -450,6 +457,53 @@ html.t-star-wars .u-col-12:nth-child(4n+3) .o-userPreview__line:after {
 }
 html.t-star-wars .u-col-12:nth-child(4n+4) .o-userPreview__line:after {
   box-shadow: 0 0 5px #fff, 0 0 8px #fff, 0 0 12px #fff, 0 0 15px purple, 0 0 25px purple;
+}
+html.t-star-wars .o-userPreview__image:hover::after {
+  content: "";
+  background-image: url(./assets/theme-starwars/force-choking.gif);
+  width: 100%;
+  top: 60%;
+  height: 100%;
+  position: absolute;
+  background-position: 130% 40%;
+  background-repeat: no-repeat;
+  background-size: 60%;
+  transform: rotate(317deg);
+}
+html.t-star-wars .popping {
+  transition-property: left, top, right, margin;
+  transform: unset;
+}
+html.t-star-wars .popping.top {
+  display: none;
+}
+html.t-star-wars .popping.left.active {
+  left: 100%;
+}
+html.t-star-wars .popping.left.active.type-a {
+  margin-top: -200px;
+  background-image: url(./assets/theme-starwars/tiefighter2.png);
+}
+html.t-star-wars .popping.left.active.type-b {
+  margin-top: 200px;
+  background-image: url(./assets/theme-starwars/tiefighter.png);
+}
+html.t-star-wars .popping.right.active {
+  right: 100%;
+}
+html.t-star-wars .popping.right.active.type-a {
+  margin-top: -200px;
+  background-image: url(./assets/theme-starwars/ywing.png);
+}
+html.t-star-wars .popping.right.active.type-b {
+  margin-top: 200px;
+  background-image: url(./assets/theme-starwars/xwing.png);
+}
+html.t-star-wars .sliding {
+  background-image: url(https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExamUwNG0zdG13N2I2aHlzemQ5dW40MnFtZTFjdXFtMnRiaW54aTI0NyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/IE7mmA2PAZGww/giphy.gif);
+  background-size: 70%;
+  background-position: 50% 130%;
+  transform: rotateY(150deg);
 }
 
 html:not([class*=t-]) .o-userDetails__image,

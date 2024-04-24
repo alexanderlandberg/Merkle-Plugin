@@ -4,18 +4,18 @@
     left: -200px;
     width: 200px;
     height: 200px;
-    background-image: url(./assets/sliding.gif);
+    background-image: url(./assets/due-walk.gif);
     background-size: contain;
     background-repeat: no-repeat;
     background-position: bottom;
     animation: kf_sliding 15s linear infinite;
     z-index: 20;
-    pointer-events: none;
+    // pointer-events: none;
 }
 
 .popping {
     position: fixed;
-    background-image: url(./assets/popping.webp);
+    background-image: url(./assets/more-dullan.webp);
     background-size: 80%;
     background-repeat: no-repeat;
     background-position: center bottom;
@@ -24,17 +24,26 @@
     transition: 2s ease-in;
     transition-property: left, top, right;
     z-index: 20;
-    pointer-events: none;
+    // pointer-events: none;
     &.top {
-        top: -150px;
+        top: -200px;
         transform: rotate(180deg);
+        &.active {
+            top: 0;
+        }
     }
     &.left {
-        left: -150px;
+        left: -200px;
         transform: rotate(90deg);
+        &.active {
+            left: 0;
+        }
     }
     &.right {
-        right: -150px;
+        right: -200px;
         transform: rotate(-90deg);
+        &.active {
+            right: 0;
+        }
     }
 }
