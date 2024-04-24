@@ -16,19 +16,32 @@
     background-repeat: no-repeat;
     background-position: bottom;
     animation: kf_due-walk 15s linear infinite;
+    z-index: 20;
     pointer-events: none;
 }
 
 .more-dullan {
     position: fixed;
     background-image: url(./assets/more-dullan.webp);
-    background-size: contain;
+    background-size: 80%;
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: center bottom;
     width: 200px;
-    height: 150px;
+    height: 200px;
     transition: 2s ease-in;
     transition-property: left, top, right;
     z-index: 20;
     pointer-events: none;
+    &.top {
+        top: -150px;
+        transform: rotate(180deg);
+    }
+    &.left {
+        left: -150px;
+        transform: rotate(90deg);
+    }
+    &.right {
+        right: -150px;
+        transform: rotate(-90deg);
+    }
 }

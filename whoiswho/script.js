@@ -40,7 +40,7 @@ function addDullan() {
 
 function easterEgg() {
     addMoreDullan()
-    addDueWalk()
+    // addDueWalk()
 }
 
 function addDueWalk() {
@@ -71,45 +71,30 @@ function addMoreDullan() {
     newDiv.classList.add("more-dullan");
     document.body.appendChild(newDiv);
 
-    //let randomNr = Math.floor(Math.random() * (4) + 1);
-    let randomNr = Math.floor(Math.random() * (3) + 2); // disable bottom
-
-    // randomNr = 4;
+    let randomNr = Math.floor(Math.random() * (3) + 1);
 
     if (randomNr === 1) {
-        newDiv.style.bottom = "-150px";
-        newDiv.style.left = `calc(${Math.floor(Math.random() * (100 - 0))}% - 100px)`;
+        newDiv.classList.add("left");
+        newDiv.style.top = `calc(${Math.floor(Math.random() * (100 - 0))}% - 100px)`;
         setTimeout(() => {
-            newDiv.style.bottom = 0;
+            newDiv.style.left = 0;
         }, 1000);
     } else if (randomNr === 2) {
-        newDiv.style.left = "-175px";
-        newDiv.style.top = `calc(${Math.floor(Math.random() * (100 - 0))}% - 100px)`;
-        newDiv.style.transform = "rotate(90deg)";
-        setTimeout(() => {
-            newDiv.style.left = "-25px";
-        }, 1000);
-
-    } else if (randomNr === 3) {
-        newDiv.style.top = "-150px";
+        newDiv.classList.add("top");
         newDiv.style.left = `calc(${Math.floor(Math.random() * (100 - 0))}% - 100px)`;
-        newDiv.style.transform = "rotate(180deg)";
         setTimeout(() => {
             newDiv.style.top = 0;
         }, 1000);
-
     } else {
-        newDiv.style.right = "-175px";
+        newDiv.classList.add("right");
         newDiv.style.top = `calc(${Math.floor(Math.random() * (100 - 0))}% - 100px)`;
-        newDiv.style.transform = "rotate(-90deg)";
         setTimeout(() => {
-            newDiv.style.right = "-25px";
+            newDiv.style.right = 0;
         }, 1000);
-
     }
 
     setTimeout(() => {
-        addMoreDullan();
+        // addMoreDullan();
     }, 1000);
 }
 

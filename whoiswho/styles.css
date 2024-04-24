@@ -26,21 +26,34 @@
   background-repeat: no-repeat;
   background-position: bottom;
   animation: kf_due-walk 15s linear infinite;
+  z-index: 20;
   pointer-events: none;
 }
 
 .more-dullan {
   position: fixed;
   background-image: url(./assets/more-dullan.webp);
-  background-size: contain;
+  background-size: 80%;
   background-repeat: no-repeat;
-  background-position: center;
+  background-position: center bottom;
   width: 200px;
-  height: 150px;
+  height: 200px;
   transition: 2s ease-in;
   transition-property: left, top, right;
   z-index: 20;
   pointer-events: none;
+}
+.more-dullan.top {
+  top: -150px;
+  transform: rotate(180deg);
+}
+.more-dullan.left {
+  left: -150px;
+  transform: rotate(90deg);
+}
+.more-dullan.right {
+  right: -150px;
+  transform: rotate(-90deg);
 }
 
 html.t-christmas .o-userPreview__imageContainer {
@@ -106,7 +119,7 @@ html.t-penguin .a-main::after {
 html.t-penguin .more-dullan {
   background-image: url(./assets/more-penguin.webp);
   background-size: 90%;
-  background-position: top;
+  background-position: 50% 80px;
 }
 html.t-penguin .due-walk {
   background-image: url(./assets/penguin-walk.gif);
@@ -169,7 +182,7 @@ html.t-valentines .a-main::after {
 html.t-valentines .more-dullan {
   background-image: url(https://creazilla-store.fra1.digitaloceanspaces.com/cliparts/13645/cupid-shooting-arrow-clipart-md.png);
   background-size: 90%;
-  background-position: top;
+  background-position: 50% 80px;
 }
 html.t-valentines .due-walk {
   background-image: url(https://i.giphy.com/3ohs4CoKEBL9QNUglq.webp);
@@ -253,9 +266,9 @@ html.t-easter .a-main {
 html.t-easter .more-dullan {
   background-image: url(./assets/easter-egg.png);
   background-size: 90%;
-  background-position: top;
+  background-position: 50% 40px;
   width: 140px;
-  height: 100px;
+  height: 140px;
 }
 html.t-easter .due-walk {
   background-image: url(./assets/easter-bunny-jump.gif);
@@ -325,8 +338,8 @@ html.t-bonk .o-userPreview:hover .o-userPreview__imageContainer::before {
 }
 html.t-bonk .more-dullan {
   background-image: url(./assets/more-doge.png);
-  background-size: 90%;
-  background-position: top;
+  background-size: 70%;
+  background-position: 50% 110%;
 }
 html.t-bonk .due-walk {
   background-image: url(./assets/doge-walk.gif);
@@ -447,8 +460,8 @@ html.t-totm .o-userPreview:hover .o-userPreview__imageContainer::before {
 html:not([class*=t-]) .more-dullan,
 html.t-totm .more-dullan {
   background-image: url(./assets/more-doge.png);
-  background-size: 90%;
-  background-position: top;
+  background-size: 70%;
+  background-position: 50% 110%;
 }
 html:not([class*=t-]) .due-walk,
 html.t-totm .due-walk {
