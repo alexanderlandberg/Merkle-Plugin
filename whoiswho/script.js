@@ -43,37 +43,41 @@ function addDullan() {
 // --- Easer Egg ---
 
 function easterEgg() {
-    addPopping()
-    addSliding()
+    let newWrapper = document.createElement("div");
+    newWrapper.classList.add("easter-egg-wrapper");
+    document.body.appendChild(newWrapper);
+    addSliding(newWrapper)
+    addPopping(newWrapper)
 }
 
-function addSliding() {
+function addSliding(wrapper) {
+
     let newDiv = document.createElement("div");
     newDiv.classList.add("sliding");
-    document.body.appendChild(newDiv);
+    wrapper.appendChild(newDiv);
 
     setTimeout(() => {
         let newDiv2 = document.createElement("div");
         newDiv2.classList.add("sliding");
-        document.body.appendChild(newDiv2);
+        wrapper.appendChild(newDiv2);
     }, 3750);
     setTimeout(() => {
         let newDiv2 = document.createElement("div");
         newDiv2.classList.add("sliding");
-        document.body.appendChild(newDiv2);
+        wrapper.appendChild(newDiv2);
     }, 7500);
     setTimeout(() => {
         let newDiv2 = document.createElement("div");
         newDiv2.classList.add("sliding");
-        document.body.appendChild(newDiv2);
+        wrapper.appendChild(newDiv2);
     }, 11250);
 }
 
-function addPopping() {
+function addPopping(wrapper) {
 
     let newDiv = document.createElement("div");
     newDiv.classList.add("popping");
-    document.body.appendChild(newDiv);
+    wrapper.appendChild(newDiv);
 
     let randomNr = Math.floor(Math.random() * (3) + 1);
 
@@ -98,7 +102,7 @@ function addPopping() {
     }
 
     setTimeout(() => {
-        addPopping();
+        addPopping(wrapper);
     }, 1000);
 }
 
