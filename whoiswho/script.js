@@ -6,6 +6,9 @@ if (window.location.href.indexOf("whoiswho.agency") > -1) {
         if (!dullanSelector) {
             addDullan();
             addNameClasses();
+            addFromLocalStorage();
+            addThemePicker();
+            showThemePicker();
         }
     }, 10);
 }
@@ -228,9 +231,3 @@ function addFromLocalStorage() {
         document.querySelector("html").classList.add(selectedTheme);
     }
 }
-
-
-// --- Callbacks ---
-addFromLocalStorage();
-addThemePicker();
-showThemePicker();
