@@ -3,6 +3,7 @@
 ### How to enable:
 
 1. Add extension to chrome
+   - Note: From June 2024, developer mode will be mandatory for user scripts. [Read more](https://developer.chrome.com/docs/extensions/reference/api/userScripts?hl=en#developer_mode_for_extension_users).
 2. Copy script to clipboard
 3. Go to whoiswho.agency
 4. Click the extension and the "+"
