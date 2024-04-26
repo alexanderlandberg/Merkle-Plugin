@@ -1,4 +1,4 @@
-# WhoIsWho-Plugin
+## WhoIsWho-Plugin
 
 ### How to enable:
 
@@ -19,3 +19,15 @@
 ```
 var j = document.createElement('script'); j.src = 'https://alexanderlandberg.github.io/Merkle-Plugin/whoiswho/script.js'; document.querySelector('head').appendChild(j); var s = document.createElement('link'); s.rel = 'stylesheet'; s.href = 'https://alexanderlandberg.github.io/Merkle-Plugin/whoiswho/styles.css'; document.querySelector('head').appendChild(s);
 ```
+
+<br>
+  
+## Merkle Gifs
+
+[Link to Merkle gifs](https://alexanderlandberg.github.io/merkle-gifs/)
+
+<br>
+
+## Email Frontend Plugin
+
+[Link to chrome extension](https://chromewebstore.google.com/detail/email-frontend-tool/mofpmgeeieehfbcddmgjadobdfiobkcd)
