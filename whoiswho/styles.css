@@ -475,7 +475,7 @@ html.t-star-wars .o-intro {
 }
 html.t-star-wars .o-intro .u-container {
   max-width: 600px;
-  animation: crawl_kf 20s linear infinite;
+  animation: crawl_kf 25s linear infinite;
 }
 html.t-star-wars .o-intro .o-intro__title {
   font-family: "Univers", sans-serif;
@@ -865,9 +865,9 @@ html.t-totm .sliding {
 }
 @keyframes crawl_kf {
   0% {
-    transform: perspective(400px) rotateX(25deg) translateY(120%);
+    transform: perspective(200px) rotateX(35deg) translateY(120%);
   }
   100% {
-    transform: perspective(400px) rotateX(25deg) translateY(-150%);
+    transform: perspective(200px) rotateX(35deg) translateY(-230%);
   }
 }/*# sourceMappingURL=styles.css.map */
