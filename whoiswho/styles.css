@@ -149,6 +149,10 @@
   background-image: url("https://alexanderlandberg.github.io/merkle-gifs/gifs/tbone-scratch.gif") !important;
 }
 
+.timmi-klügel .o-userPreview__image {
+  background-image: url("./assets/profile-images/southpark-timmy.jpeg") !important;
+}
+
 .ulrik-mailand .o-userPreview__image {
   background-image: url("./assets/profile-images/john-malkovich.jpeg") !important;
 }

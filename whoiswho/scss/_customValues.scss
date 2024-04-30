@@ -60,6 +60,9 @@
 .thomas-gjermansen {
     @include replaceImg("https://alexanderlandberg.github.io/merkle-gifs/gifs/tbone-scratch.gif");
 }
+.timmi-klügel {
+    @include replaceImg("./assets/profile-images/southpark-timmy.jpeg");
+}
 .ulrik-mailand {
     @include replaceImg("./assets/profile-images/john-malkovich.jpeg");
 }
