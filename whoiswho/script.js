@@ -168,6 +168,11 @@ const themeList = {
         "name": "Bonk",
         "emoji": "🐕"
     },
+    "bonk": {
+        "id": "star-wars",
+        "name": "Star Wars",
+        "emoji": "⚔️"
+    },
 }
 
 function showThemePicker() {

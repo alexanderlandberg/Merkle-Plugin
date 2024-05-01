@@ -535,17 +535,17 @@ html.t-star-wars .u-col-12:nth-child(4n+1) .o-userPreview__line:before {
   top: -18px;
 }
 html.t-star-wars .u-col-12:nth-child(4n+1) .o-userPreview__line:after {
-  box-shadow: 0 0 5px #fff, 0 0 8px #fff, 0 0 12px #fff, 0 0 15px blue, 0 0 25px blue;
+  box-shadow: 0 0 5px #fff, 0 0 8px blue, 0 0 12px blue, 0 0 15px blue, 0 0 25px blue;
 }
 html.t-star-wars .u-col-12:nth-child(4n+2) .o-userPreview__line:after {
-  box-shadow: 0 0 5px #fff, 0 0 8px #fff, 0 0 12px #fff, 0 0 15px red, 0 0 25px red;
+  box-shadow: 0 0 5px #fff, 0 0 8px red, 0 0 12px red, 0 0 15px red, 0 0 25px red;
 }
 html.t-star-wars .u-col-12:nth-child(4n+3) .o-userPreview__line:before {
   background-image: url(./assets/themes/starwars/lightsaber-handle2.png);
   top: -14px;
 }
 html.t-star-wars .u-col-12:nth-child(4n+3) .o-userPreview__line:after {
-  box-shadow: 0 0 5px #fff, 0 0 8px #fff, 0 0 12px #fff, 0 0 15px green, 0 0 25px green;
+  box-shadow: 0 0 5px #fff, 0 0 8px green, 0 0 12px green, 0 0 15px green, 0 0 25px green;
   left: 90px;
 }
 html.t-star-wars .u-col-12:nth-child(4n+3) .o-userPreview:hover .o-userPreview__line:after {
@@ -556,7 +556,7 @@ html.t-star-wars .u-col-12:nth-child(4n+4) .o-userPreview__line:before {
   top: -13.5px;
 }
 html.t-star-wars .u-col-12:nth-child(4n+4) .o-userPreview__line:after {
-  box-shadow: 0 0 5px #fff, 0 0 8px #fff, 0 0 12px #fff, 0 0 15px purple, 0 0 25px purple;
+  box-shadow: 0 0 5px #fff, 0 0 8px purple, 0 0 12px purple, 0 0 15px purple, 0 0 25px purple;
 }
 html.t-star-wars .popping {
   transition-property: left, top, right, margin;
@@ -627,6 +627,7 @@ html.t-star-wars .kristian-hartmann.u-col-12 .o-userPreview__line:before {
 html.t-star-wars .kristian-hartmann.u-col-12 .o-userPreview__line:after {
   left: 140px;
   width: 0;
+  box-shadow: 0 0 5px red, 0 0 8px red, 0 0 12px red, 0 0 15px red, 0 0 25px red;
 }
 html.t-star-wars .kristian-hartmann.u-col-12 .o-userPreview:hover .o-userPreview__line:after {
   animation: blaster_kf 1.5s linear infinite;
@@ -662,88 +663,267 @@ html.t-star-wars .vedant-vyas .o-userPreview__image {
   background-image: url("./assets/themes/starwars/profile-images/finn.jpg") !important;
 }
 
-html:not([class*=t-]) .o-userDetails__image,
-html.t-totm .o-userDetails__image {
-  background-size: 100% 200%;
-  animation: squishy_kf 1s ease-in-out infinite alternate;
+html:not([class*=t-]) .o-header,
+html.t-totm .o-header {
+  background-image: url(./assets/themes/starwars/hyperspace.gif);
+  background-size: cover;
+  background-position: center;
 }
-html:not([class*=t-]) .o-userPreview__image,
-html.t-totm .o-userPreview__image {
-  background-size: 100% 200%;
+html:not([class*=t-]) .o-header .o-navigation,
+html.t-totm .o-header .o-navigation {
+  background: unset;
 }
-html:not([class*=t-]) .o-userPreview__imageContainer,
-html.t-totm .o-userPreview__imageContainer {
-  overflow: visible;
+html:not([class*=t-]) .o-header .o-navigation__link,
+html.t-totm .o-header .o-navigation__link {
+  font-family: "Star Jedi", sans-serif;
+  text-transform: lowercase;
 }
-html:not([class*=t-]) .o-userPreview__imageContainer::after,
-html.t-totm .o-userPreview__imageContainer::after {
+html:not([class*=t-]) .a-main,
+html.t-totm .a-main {
+  background-image: url(./assets/themes/starwars/background.jpeg);
+  background-size: contain;
+}
+html:not([class*=t-]) .o-intro,
+html.t-totm .o-intro {
+  overflow: hidden;
+  background: unset;
+  border: none;
+}
+html:not([class*=t-]) .o-intro .u-container,
+html.t-totm .o-intro .u-container {
+  max-width: 600px;
+  animation: crawl_kf 25s linear infinite;
+}
+html:not([class*=t-]) .o-intro .o-intro__title,
+html.t-totm .o-intro .o-intro__title {
+  font-family: "Univers", sans-serif;
+  font-weight: 300;
+  font-size: 10rem;
+  text-align: center;
+  color: #feed00;
+}
+html:not([class*=t-]) .o-intro .o-intro__description,
+html.t-totm .o-intro .o-intro__description {
+  font-family: "News Gothic", sans-serif;
+  text-align: center;
+  color: #feed00;
+  text-align: justify;
+}
+html:not([class*=t-]) .o-userPreview .o-userPreview__breadcrumb,
+html:not([class*=t-]) .o-userPreview .o-userPreview__name,
+html:not([class*=t-]) .o-userPreview .o-userPreview__title,
+html:not([class*=t-]) .o-userPreview:hover .o-userPreview__breadcrumb,
+html:not([class*=t-]) .o-userPreview:hover .o-userPreview__name,
+html:not([class*=t-]) .o-userPreview:hover .o-userPreview__title,
+html.t-totm .o-userPreview .o-userPreview__breadcrumb,
+html.t-totm .o-userPreview .o-userPreview__name,
+html.t-totm .o-userPreview .o-userPreview__title,
+html.t-totm .o-userPreview:hover .o-userPreview__breadcrumb,
+html.t-totm .o-userPreview:hover .o-userPreview__name,
+html.t-totm .o-userPreview:hover .o-userPreview__title {
+  color: #46e5e8;
+  text-shadow: 0 0 3px #46e5e8;
+  font-family: "News Gothic";
+}
+html:not([class*=t-]) .o-userPreview__line,
+html.t-totm .o-userPreview__line {
+  margin: 1.5rem 0;
+  background: unset;
+}
+html:not([class*=t-]) .o-userPreview__line:before,
+html.t-totm .o-userPreview__line:before {
   content: "";
-  display: none;
   position: absolute;
-  width: 36%;
-  height: 70%;
-  left: 70%;
-  top: -42%;
-  z-index: 10;
-  background-image: url(./assets/themes/bonk/bonk-doge.png);
+  left: 0px;
+  top: -15px;
+  width: 100px;
+  height: 30px;
+  z-index: 8;
+  background-image: url(./assets/themes/starwars/lightsaber-handle1.png);
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
-  pointer-events: none;
 }
-html:not([class*=t-]) .o-userPreview__imageContainer::before,
-html.t-totm .o-userPreview__imageContainer::before {
-  content: "";
-  display: none;
-  position: absolute;
-  width: 35%;
-  height: 37%;
-  left: 70%;
-  top: -18%;
-  z-index: 11;
-  background-image: url(./assets/themes/bonk/bonk-bat.png);
-  background-repeat: no-repeat;
-  background-size: contain;
-  background-position: center;
-  pointer-events: none;
-  transform-origin: 5% 90%;
-  transform: rotate(290deg);
-  animation: swing_bat_kf 1s ease-in-out infinite alternate;
+html:not([class*=t-]) .o-userPreview__line:after,
+html.t-totm .o-userPreview__line:after {
+  background-color: #fff;
+  transition: width 0.5s ease-in-out;
+  width: 0;
+  left: 85px;
 }
-html:not([class*=t-]) .o-userPreview:hover .o-userPreview__image,
-html.t-totm .o-userPreview:hover .o-userPreview__image {
-  animation: squishy_kf 1s ease-in-out infinite alternate;
+html:not([class*=t-]) .o-userPreview:hover .o-userPreview__line:after,
+html.t-totm .o-userPreview:hover .o-userPreview__line:after {
+  width: calc(100% - 85px);
 }
-html:not([class*=t-]) .o-userPreview:hover .o-userPreview__image::before,
-html.t-totm .o-userPreview:hover .o-userPreview__image::before {
-  content: "*BONK*";
-  position: absolute;
-  top: -14%;
-  right: 24%;
-  z-index: 13;
-  visibility: hidden;
-  animation: bonk_kf 1s ease-in-out infinite alternate;
+html:not([class*=t-]) .u-col-12:nth-child(4n+1) .o-userPreview__line:before,
+html.t-totm .u-col-12:nth-child(4n+1) .o-userPreview__line:before {
+  background-image: url(./assets/themes/starwars/lightsaber-handle4.png);
+  top: -18px;
 }
-html:not([class*=t-]) .o-userPreview:hover .o-userPreview__imageContainer::after,
-html.t-totm .o-userPreview:hover .o-userPreview__imageContainer::after {
-  display: block;
+html:not([class*=t-]) .u-col-12:nth-child(4n+1) .o-userPreview__line:after,
+html.t-totm .u-col-12:nth-child(4n+1) .o-userPreview__line:after {
+  box-shadow: 0 0 5px #fff, 0 0 8px blue, 0 0 12px blue, 0 0 15px blue, 0 0 25px blue;
 }
-html:not([class*=t-]) .o-userPreview:hover .o-userPreview__imageContainer::before,
-html.t-totm .o-userPreview:hover .o-userPreview__imageContainer::before {
-  display: block;
+html:not([class*=t-]) .u-col-12:nth-child(4n+2) .o-userPreview__line:after,
+html.t-totm .u-col-12:nth-child(4n+2) .o-userPreview__line:after {
+  box-shadow: 0 0 5px #fff, 0 0 8px red, 0 0 12px red, 0 0 15px red, 0 0 25px red;
+}
+html:not([class*=t-]) .u-col-12:nth-child(4n+3) .o-userPreview__line:before,
+html.t-totm .u-col-12:nth-child(4n+3) .o-userPreview__line:before {
+  background-image: url(./assets/themes/starwars/lightsaber-handle2.png);
+  top: -14px;
+}
+html:not([class*=t-]) .u-col-12:nth-child(4n+3) .o-userPreview__line:after,
+html.t-totm .u-col-12:nth-child(4n+3) .o-userPreview__line:after {
+  box-shadow: 0 0 5px #fff, 0 0 8px green, 0 0 12px green, 0 0 15px green, 0 0 25px green;
+  left: 90px;
+}
+html:not([class*=t-]) .u-col-12:nth-child(4n+3) .o-userPreview:hover .o-userPreview__line:after,
+html.t-totm .u-col-12:nth-child(4n+3) .o-userPreview:hover .o-userPreview__line:after {
+  width: calc(100% - 90px);
+}
+html:not([class*=t-]) .u-col-12:nth-child(4n+4) .o-userPreview__line:before,
+html.t-totm .u-col-12:nth-child(4n+4) .o-userPreview__line:before {
+  background-image: url(./assets/themes/starwars/lightsaber-handle3.png);
+  top: -13.5px;
+}
+html:not([class*=t-]) .u-col-12:nth-child(4n+4) .o-userPreview__line:after,
+html.t-totm .u-col-12:nth-child(4n+4) .o-userPreview__line:after {
+  box-shadow: 0 0 5px #fff, 0 0 8px purple, 0 0 12px purple, 0 0 15px purple, 0 0 25px purple;
 }
 html:not([class*=t-]) .popping,
 html.t-totm .popping {
-  background-image: url(./assets/themes/bonk/more-doge.png);
-  background-size: 70%;
-  background-position: 50% 110%;
+  transition-property: left, top, right, margin;
+  transform: unset;
+}
+html:not([class*=t-]) .popping.top,
+html.t-totm .popping.top {
+  display: none;
+}
+html:not([class*=t-]) .popping.left.active,
+html.t-totm .popping.left.active {
+  left: 100%;
+}
+html:not([class*=t-]) .popping.left.active.type-a,
+html.t-totm .popping.left.active.type-a {
+  margin-top: -200px;
+  background-image: url(./assets/themes/starwars/tiefighter2.png);
+}
+html:not([class*=t-]) .popping.left.active.type-b,
+html.t-totm .popping.left.active.type-b {
+  margin-top: 200px;
+  background-image: url(./assets/themes/starwars/tiefighter.png);
+}
+html:not([class*=t-]) .popping.right.active,
+html.t-totm .popping.right.active {
+  right: 100%;
+}
+html:not([class*=t-]) .popping.right.active.type-a,
+html.t-totm .popping.right.active.type-a {
+  margin-top: -200px;
+  background-image: url(./assets/themes/starwars/ywing.png);
+}
+html:not([class*=t-]) .popping.right.active.type-b,
+html.t-totm .popping.right.active.type-b {
+  margin-top: 200px;
+  background-image: url(./assets/themes/starwars/xwing.png);
 }
 html:not([class*=t-]) .sliding,
 html.t-totm .sliding {
-  background-image: url(./assets/themes/bonk/doge-walk.gif);
+  background-image: url(https://media4.giphy.com/media/v1.Y2lkPTc5MGI3NjExamUwNG0zdG13N2I2aHlzemQ5dW40MnFtZTFjdXFtMnRiaW54aTI0NyZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9cw/IE7mmA2PAZGww/giphy.gif);
   background-size: 70%;
-  background-position: bottom;
-  transform: rotateY(180deg);
+  background-position: 50% 130%;
+  transform: rotateY(150deg);
+}
+html:not([class*=t-]) .alexander-ellegaard-landberg .o-userPreview__image,
+html.t-totm .alexander-ellegaard-landberg .o-userPreview__image {
+  background-image: url("./assets/themes/starwars/profile-images/anakin.jpg") !important;
+}
+html:not([class*=t-]) .alexander-dons-lund .o-userPreview__image,
+html.t-totm .alexander-dons-lund .o-userPreview__image {
+  background-image: url("./assets/themes/starwars/profile-images/crumb.webp") !important;
+}
+html:not([class*=t-]) .andreas-tyrholm .o-userPreview__image,
+html.t-totm .andreas-tyrholm .o-userPreview__image {
+  background-image: url("./assets/themes/starwars/profile-images/obiwan.jpg") !important;
+}
+html:not([class*=t-]) .camilla-einfeldt .o-userPreview__image,
+html.t-totm .camilla-einfeldt .o-userPreview__image {
+  background-image: url("./assets/themes/starwars/profile-images/rey.jpg") !important;
+}
+html:not([class*=t-]) .jill-hansen .o-userPreview__image,
+html.t-totm .jill-hansen .o-userPreview__image {
+  background-image: url("./assets/themes/starwars/profile-images/syndulla.jpg") !important;
+}
+html:not([class*=t-]) .kasper-hornum-pontoppidan .o-userPreview__image,
+html.t-totm .kasper-hornum-pontoppidan .o-userPreview__image {
+  background-image: url("./assets/themes/starwars/profile-images/jabba.jpeg") !important;
+}
+html:not([class*=t-]) .kristian-hartmann .o-userPreview__image,
+html.t-totm .kristian-hartmann .o-userPreview__image {
+  background-image: url("./assets/themes/starwars/profile-images/leia.jpg") !important;
+}
+html:not([class*=t-]) .kristian-hartmann.u-col-12 .o-userPreview__line,
+html.t-totm .kristian-hartmann.u-col-12 .o-userPreview__line {
+  margin: 1.5rem 0 7rem;
+}
+html:not([class*=t-]) .kristian-hartmann.u-col-12 .o-userPreview__line:before,
+html.t-totm .kristian-hartmann.u-col-12 .o-userPreview__line:before {
+  top: -24px;
+  width: 140px;
+  height: 100px;
+  background-image: url(./assets/themes/starwars/leia-blaster.png);
+  transform: rotateZ(8deg);
+}
+html:not([class*=t-]) .kristian-hartmann.u-col-12 .o-userPreview__line:after,
+html.t-totm .kristian-hartmann.u-col-12 .o-userPreview__line:after {
+  left: 140px;
+  width: 0;
+  box-shadow: 0 0 5px red, 0 0 8px red, 0 0 12px red, 0 0 15px red, 0 0 25px red;
+}
+html:not([class*=t-]) .kristian-hartmann.u-col-12 .o-userPreview:hover .o-userPreview__line:after,
+html.t-totm .kristian-hartmann.u-col-12 .o-userPreview:hover .o-userPreview__line:after {
+  animation: blaster_kf 1.5s linear infinite;
+}
+html:not([class*=t-]) .magnus-toftegaard-selsing .o-userPreview__image,
+html.t-totm .magnus-toftegaard-selsing .o-userPreview__image {
+  background-image: url("./assets/themes/starwars/profile-images/maul.jpg") !important;
+}
+html:not([class*=t-]) .nicklas-frandsen .o-userPreview__image,
+html.t-totm .nicklas-frandsen .o-userPreview__image {
+  background-image: url("./assets/themes/starwars/profile-images/yoda.jpg") !important;
+}
+html:not([class*=t-]) .nicoline-lage .o-userPreview__image,
+html.t-totm .nicoline-lage .o-userPreview__image {
+  background-image: url("./assets/themes/starwars/profile-images/ahsoka.jpg") !important;
+}
+html:not([class*=t-]) .petra-vasiljev .o-userPreview__image,
+html.t-totm .petra-vasiljev .o-userPreview__image {
+  background-image: url("./assets/themes/starwars/profile-images/bokatan.jpg") !important;
+}
+html:not([class*=t-]) .robert-ayzma .o-userPreview__image,
+html.t-totm .robert-ayzma .o-userPreview__image {
+  background-image: url("./assets/themes/starwars/profile-images/ben.jpg") !important;
+}
+html:not([class*=t-]) .sabine-bøgh .o-userPreview__image,
+html.t-totm .sabine-bøgh .o-userPreview__image {
+  background-image: url("./assets/themes/starwars/profile-images/amidala.jpg") !important;
+}
+html:not([class*=t-]) .simon-nielsen .o-userPreview__image,
+html.t-totm .simon-nielsen .o-userPreview__image {
+  background-image: url("./assets/themes/starwars/profile-images/quigon.jpg") !important;
+}
+html:not([class*=t-]) .sune-brodersen .o-userPreview__image,
+html.t-totm .sune-brodersen .o-userPreview__image {
+  background-image: url("./assets/themes/starwars/profile-images/sidious.jpg") !important;
+}
+html:not([class*=t-]) .ulrik-mailand .o-userPreview__image,
+html.t-totm .ulrik-mailand .o-userPreview__image {
+  background-image: url("./assets/themes/starwars/profile-images/vader.jpg") !important;
+}
+html:not([class*=t-]) .vedant-vyas .o-userPreview__image,
+html.t-totm .vedant-vyas .o-userPreview__image {
+  background-image: url("./assets/themes/starwars/profile-images/finn.jpg") !important;
 }
 
 .theme-picker-button {

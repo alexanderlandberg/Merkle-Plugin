@@ -95,8 +95,8 @@
             .o-userPreview__line:after {
                 box-shadow:
                     0 0 5px #fff,
-                    0 0 8px #fff,
-                    0 0 12px #fff,
+                    0 0 8px blue,
+                    0 0 12px blue,
                     0 0 15px blue,
                     0 0 25px blue;
             }
@@ -105,8 +105,8 @@
             .o-userPreview__line:after {
                 box-shadow:
                     0 0 5px #fff,
-                    0 0 8px #fff,
-                    0 0 12px #fff,
+                    0 0 8px red,
+                    0 0 12px red,
                     0 0 15px red,
                     0 0 25px red;
             }
@@ -119,8 +119,8 @@
             .o-userPreview__line:after {
                 box-shadow:
                     0 0 5px #fff,
-                    0 0 8px #fff,
-                    0 0 12px #fff,
+                    0 0 8px green,
+                    0 0 12px green,
                     0 0 15px green,
                     0 0 25px green;
                 left: 90px;
@@ -137,8 +137,8 @@
             .o-userPreview__line:after {
                 box-shadow:
                     0 0 5px #fff,
-                    0 0 8px #fff,
-                    0 0 12px #fff,
+                    0 0 8px purple,
+                    0 0 12px purple,
                     0 0 15px purple,
                     0 0 25px purple;
             }
@@ -207,7 +207,7 @@
         &.u-col-12 {
             .o-userPreview__line {
                 margin: 1.5rem 0 7rem;
-                // handle
+                // blaster
                 &:before {
                     top: -24px;
                     width: 140px;
@@ -215,10 +215,16 @@
                     background-image: url(./assets/themes/starwars/leia-blaster.png);
                     transform: rotateZ(8deg);
                 }
-                // blade
+                // fire
                 &:after {
                     left: 140px;
                     width: 0;
+                    box-shadow:
+                        0 0 5px red,
+                        0 0 8px red,
+                        0 0 12px red,
+                        0 0 15px red,
+                        0 0 25px red;
                 }
             }
             .o-userPreview:hover .o-userPreview__line:after {
