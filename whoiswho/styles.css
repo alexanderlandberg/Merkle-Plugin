@@ -952,7 +952,7 @@ html.t-totm .vedant-vyas .o-userPreview__image {
   background-color: #f23a1d;
 }
 .theme-picker-button:hover ~ .theme-picker {
-  max-height: 270px;
+  max-height: 296px;
 }
 
 .theme-picker {
@@ -972,7 +972,7 @@ html.t-totm .vedant-vyas .o-userPreview__image {
           user-select: none;
 }
 .theme-picker:hover {
-  max-height: 270px;
+  max-height: 296px;
 }
 .theme-picker label {
   padding: 8px 16px;

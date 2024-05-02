@@ -168,7 +168,7 @@ const themeList = {
         "name": "Bonk",
         "emoji": "🐕"
     },
-    "bonk": {
+    "starwars": {
         "id": "star-wars",
         "name": "Star Wars",
         "emoji": "⚔️"

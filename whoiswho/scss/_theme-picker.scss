@@ -1,4 +1,4 @@
-$theme-picker-maxheight: 270px;
+$theme-picker-maxheight: 16px + (40 * 7); // margin + (rowHeight + rowAmount)
 
 .theme-picker-button {
     position: absolute;
