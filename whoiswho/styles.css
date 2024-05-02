@@ -635,6 +635,22 @@ html.t-star-wars .kristian-hartmann.u-col-12 .o-userPreview:hover .o-userPreview
 html.t-star-wars .magnus-toftegaard-selsing .o-userPreview__image {
   background-image: url("./assets/themes/starwars/profile-images/maul.jpg") !important;
 }
+html.t-star-wars .magnus-toftegaard-selsing.u-col-12 .o-userPreview__line:before {
+  background-image: url(./assets/themes/starwars/lightsaber-handle-darth-maul.png);
+  background-color: rgba(0, 0, 0, 0.75);
+  width: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+html.t-star-wars .magnus-toftegaard-selsing.u-col-12 .o-userPreview__line:after {
+  box-shadow: 0 0 5px red, 0 0 8px red, 0 0 12px red, 0 0 15px red, 0 0 25px red;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+}
+html.t-star-wars .magnus-toftegaard-selsing.u-col-12 .o-userPreview:hover .o-userPreview__line:after {
+  width: 100%;
+}
 html.t-star-wars .nicklas-frandsen .o-userPreview__image {
   background-image: url("./assets/themes/starwars/profile-images/yoda.jpg") !important;
 }
@@ -888,6 +904,25 @@ html.t-totm .kristian-hartmann.u-col-12 .o-userPreview:hover .o-userPreview__lin
 html:not([class*=t-]) .magnus-toftegaard-selsing .o-userPreview__image,
 html.t-totm .magnus-toftegaard-selsing .o-userPreview__image {
   background-image: url("./assets/themes/starwars/profile-images/maul.jpg") !important;
+}
+html:not([class*=t-]) .magnus-toftegaard-selsing.u-col-12 .o-userPreview__line:before,
+html.t-totm .magnus-toftegaard-selsing.u-col-12 .o-userPreview__line:before {
+  background-image: url(./assets/themes/starwars/lightsaber-handle-darth-maul.png);
+  background-color: rgba(0, 0, 0, 0.75);
+  width: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+html:not([class*=t-]) .magnus-toftegaard-selsing.u-col-12 .o-userPreview__line:after,
+html.t-totm .magnus-toftegaard-selsing.u-col-12 .o-userPreview__line:after {
+  box-shadow: 0 0 5px red, 0 0 8px red, 0 0 12px red, 0 0 15px red, 0 0 25px red;
+  margin: 0 auto;
+  left: 0;
+  right: 0;
+}
+html:not([class*=t-]) .magnus-toftegaard-selsing.u-col-12 .o-userPreview:hover .o-userPreview__line:after,
+html.t-totm .magnus-toftegaard-selsing.u-col-12 .o-userPreview:hover .o-userPreview__line:after {
+  width: 100%;
 }
 html:not([class*=t-]) .nicklas-frandsen .o-userPreview__image,
 html.t-totm .nicklas-frandsen .o-userPreview__image {

@@ -234,6 +234,33 @@
     }
     .magnus-toftegaard-selsing {
         @include replaceImg("./assets/themes/starwars/profile-images/maul.jpg");
+        &.u-col-12 {
+            .o-userPreview__line {
+                // handle
+                &:before {
+                    background-image: url(./assets/themes/starwars/lightsaber-handle-darth-maul.png);
+                    background-color: rgba(0, 0, 0, 0.75); // hide red box-shadow
+                    width: 100px;
+                    left: 50%;
+                    transform: translateX(-50%);
+                }
+                // blade
+                &:after {
+                    box-shadow:
+                        0 0 5px red,
+                        0 0 8px red,
+                        0 0 12px red,
+                        0 0 15px red,
+                        0 0 25px red;
+                    margin: 0 auto;
+                    left: 0;
+                    right: 0;
+                }
+            }
+            .o-userPreview:hover .o-userPreview__line:after {
+                width: 100%;
+            }
+        }
     }
     .nicklas-frandsen {
         @include replaceImg("./assets/themes/starwars/profile-images/yoda.jpg");
