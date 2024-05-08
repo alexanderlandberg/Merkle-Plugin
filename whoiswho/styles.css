@@ -657,6 +657,9 @@ html.t-star-wars .nicklas-frandsen .o-userPreview__image {
 html.t-star-wars .nicoline-lage .o-userPreview__image {
   background-image: url("./assets/themes/starwars/profile-images/ahsoka.jpg") !important;
 }
+html.t-star-wars .nikolaj-wahl-johansen .o-userPreview__image {
+  background-image: url("./assets/themes/starwars/profile-images/luke.jpg") !important;
+}
 html.t-star-wars .petra-vasiljev .o-userPreview__image {
   background-image: url("./assets/themes/starwars/profile-images/bokatan.jpg") !important;
 }
@@ -931,6 +934,10 @@ html.t-totm .nicklas-frandsen .o-userPreview__image {
 html:not([class*=t-]) .nicoline-lage .o-userPreview__image,
 html.t-totm .nicoline-lage .o-userPreview__image {
   background-image: url("./assets/themes/starwars/profile-images/ahsoka.jpg") !important;
+}
+html:not([class*=t-]) .nikolaj-wahl-johansen .o-userPreview__image,
+html.t-totm .nikolaj-wahl-johansen .o-userPreview__image {
+  background-image: url("./assets/themes/starwars/profile-images/luke.jpg") !important;
 }
 html:not([class*=t-]) .petra-vasiljev .o-userPreview__image,
 html.t-totm .petra-vasiljev .o-userPreview__image {

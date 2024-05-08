@@ -268,6 +268,9 @@
     .nicoline-lage {
         @include replaceImg("./assets/themes/starwars/profile-images/ahsoka.jpg");
     }
+    .nikolaj-wahl-johansen {
+        @include replaceImg("./assets/themes/starwars/profile-images/luke.jpg");
+    }
     .petra-vasiljev {
         @include replaceImg("./assets/themes/starwars/profile-images/bokatan.jpg");
     }
