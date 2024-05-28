@@ -1,0 +1,10 @@
+@mixin theme-rip {
+    .o-userPreview__image,
+    .o-userDetails__image {
+        filter: grayscale(1);
+        background-image: url("./assets/themes/rip/rip.jpeg") !important;
+    }
+}
+html.t-rip {
+    @include theme-rip;
+}

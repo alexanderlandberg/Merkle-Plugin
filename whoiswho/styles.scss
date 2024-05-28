@@ -14,10 +14,11 @@
 @import "scss/themes/easter";
 @import "scss/themes/bonk";
 @import "scss/themes/star-wars";
+@import "scss/themes/rip";
 
 html:not([class*="t-"]),
 html.t-totm {
-    @include theme-star-wars;
+    @include theme-rip;
 }
 
 // Theme picker

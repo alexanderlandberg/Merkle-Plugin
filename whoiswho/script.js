@@ -173,6 +173,11 @@ const themeList = {
         "name": "Star Wars",
         "emoji": "⚔️"
     },
+    "rip": {
+        "id": "rip",
+        "name": "Last Theme Ever...",
+        "emoji": "🪦"
+    },
 }
 
 function showThemePicker() {
