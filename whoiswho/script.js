@@ -1,18 +1,63 @@
 // --- Init ---
 
 if (window.location.href.indexOf("whoiswho.agency") > -1) {
-    setInterval(() => {
-        let dullanSelector = document.querySelector(".dullan");
-        if (!dullanSelector) {
-            if (!document.querySelector(".theme-picker")) {
-                addFromLocalStorage();
-                addThemePicker();
-                showThemePicker();
-            }
-            addDullan();
-            addNameClasses();
+    // setInterval(() => {
+    //     let dullanSelector = document.querySelector(".dullan");
+    //     if (!dullanSelector) {
+    //         if (!document.querySelector(".theme-picker")) {
+    //             addFromLocalStorage();
+    //             addThemePicker();
+    //             showThemePicker();
+    //         }
+    //         addDullan();
+    //         addNameClasses();
+    //     }
+    // }, 10);
+
+    // new whoiswho
+    newWhoisWho()
+}
+
+// --- New WhoIsWho ---
+function newWhoisWho() {
+    console.log("hello")
+    let newWrapper = document.createElement("div");
+    newWrapper.classList.add("easter-egg-wrapper");
+    document.body.appendChild(newWrapper);
+    addTbone(newWrapper);
+
+    function addTbone(wrapper) {
+        console.log("HELLO")
+
+        let newDiv = document.createElement("div");
+        newDiv.classList.add("popping");
+        newDiv.style.backgroundImage = "url(https://alexanderlandberg.dk/merkle/Mix/T-bone.png)";
+        wrapper.appendChild(newDiv);
+
+        let randomNr = Math.floor(Math.random() * (4) + 1);
+        console.log(randomNr)
+        if (randomNr === 1) {
+            newDiv.classList.add("left");
+            newDiv.style.top = `calc(${Math.floor(Math.random() * (100 - 0))}% - 100px)`;
+        } else if (randomNr === 2) {
+            newDiv.classList.add("top");
+            newDiv.style.left = `calc(${Math.floor(Math.random() * (100 - 0))}% - 100px)`;
+        } else if (randomNr === 3) {
+            newDiv.classList.add("right");
+            newDiv.style.top = `calc(${Math.floor(Math.random() * (100 - 0))}% - 100px)`;
+        } else {
+            newDiv.classList.add("bottom");
+            newDiv.style.left = `calc(${Math.floor(Math.random() * (100 - 0))}% - 100px)`;
         }
-    }, 10);
+
+        setTimeout(() => {
+            newDiv.classList.add("active");
+        }, 1000);
+
+        setTimeout(() => {
+            addTbone(wrapper);
+        }, 1000);
+    }
 }
 
 // --- Dullan ---

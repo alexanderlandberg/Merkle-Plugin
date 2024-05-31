@@ -59,7 +59,7 @@
   width: 200px;
   height: 200px;
   transition: 2s ease-in;
-  transition-property: left, top, right;
+  transition-property: left, top, right, bottom;
   z-index: 20;
   pointer-events: none;
 }
@@ -83,6 +83,13 @@
 }
 .popping.right.active {
   right: 0;
+}
+.popping.bottom {
+  bottom: -200px;
+  transform: rotate(0);
+}
+.popping.bottom.active {
+  bottom: 0;
 }
 
 .o-userPreview__image {
