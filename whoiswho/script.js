@@ -20,14 +20,12 @@ if (window.location.href.indexOf("whoiswho.agency") > -1) {
 
 // --- New WhoIsWho ---
 function newWhoisWho() {
-    console.log("hello")
     let newWrapper = document.createElement("div");
     newWrapper.classList.add("easter-egg-wrapper");
     document.body.appendChild(newWrapper);
     addTbone(newWrapper);
 
     function addTbone(wrapper) {
-        console.log("HELLO")
 
         let newDiv = document.createElement("div");
         newDiv.classList.add("popping");
@@ -35,7 +33,6 @@ function newWhoisWho() {
         wrapper.appendChild(newDiv);
 
         let randomNr = Math.floor(Math.random() * (4) + 1);
-        console.log(randomNr)
         if (randomNr === 1) {
             newDiv.classList.add("left");
             newDiv.style.top = `calc(${Math.floor(Math.random() * (100 - 0))}% - 100px)`;
